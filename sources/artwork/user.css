@@ -1,0 +1,76 @@
+/* Artwork: the artwork of the current track fills the whole window, blurred behind dark glass panels that float,
+   like Spicetify's Hazy or Comfy themes. The background changes with each track.
+
+   How it works: `background: artwork` puts the artwork on the window; the floating-panels layout makes the layers
+   above it transparent and lines up the panels; each panel then takes an acrylic, which blurs what is behind it. The
+   playback bar floats too, as a third panel above the pages. */
+
+:root {
+    --window-background: artwork cover;
+    --glass: acrylic(#0B0B10, 0.62);
+    --glass-light: acrylic(#0B0B10, 0.45);
+    --panel-radius: 18px;
+    --gap: 10;
+    --gap-half: 5;
+    /* The bar: 64 high, 10 from the top, then a gap of 10 before the pages. */
+    --content-top: 84;
+}
+
+@import "ampify:floating-panels";
+
+.sidebar {
+    backdrop: var(--glass);
+}
+
+/* The pages: lighter glass, so the artwork shows through. */
+.content {
+    backdrop: var(--glass-light);
+}
+
+/* The bar stops before the window's buttons, so it needs no strip to keep them readable. */
+.playbar {
+    backdrop: var(--glass);
+    corner-radius: var(--panel-radius);
+    margin: 10 148 0 5;
+}
+
+.caption-buttons-cover {
+    visibility: collapsed;
+}
+
+.playbar-toggles {
+    horizontal-alignment: right;
+    margin: 0 12 0 0;
+}
+
+.lcd {
+    background: #33FFFFFF;
+    corner-radius: 12px;
+}
+
+/* The artwork in the bar grows on hover. */
+.lcd-artwork-image {
+    transform-origin: center;
+    corner-radius: 6px;
+}
+
+.lcd-artwork-image:hover {
+    transform: scale(1.1);
+}
+
+.app-name {
+    font-weight: 700;
+}
+
+.card {
+    corner-radius: 12px;
+    transition: background 180ms;
+}
+
+.card:hover {
+    background: #1FFFFFFF;
+}
+
+.artwork {
+    corner-radius: 10px;
+}

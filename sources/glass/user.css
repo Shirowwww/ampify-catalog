@@ -1,0 +1,148 @@
+/* Glass: a complete redesign of the interface. A night gradient behind frosted panels, large rounded cards, larger and
+   airier text, buttons that grow on hover, shadows under the cards.
+
+   The floating-panels layout lines the panels up (docs/themes/format.md, "Ready-made layouts"); the classes are
+   Ampify's stable names for Apple Music's zones (docs/themes/names.md). */
+
+:root {
+    --font-title: "Segoe UI Variable Display";
+    --font-title-weight: 700;
+    --font-title-size: 30px;
+    --font-body: "Segoe UI Variable Text";
+    --font-body-size: 15px;
+    --window-background: linear-gradient(135deg, #0E1424 0%, #1A2240 55%, #2A1F45 100%);
+    --panel-radius: 18px;
+    --gap: 12;
+    --gap-half: 6;
+    --radius-button: 12px;
+    --glass: acrylic($LayerFillColorDefaultBrush, 0.55);
+}
+
+@import "ampify:floating-panels";
+
+/* ---- Sidebar: frosted glass ---------------------------------------------------------------------------------------- */
+
+.sidebar {
+    backdrop: var(--glass);
+}
+
+.sidebar-header {
+    padding: 12 16 8 16;
+}
+
+.app-name {
+    font-role: title;
+    font-size: 22px;
+}
+
+.sidebar-items NavigationViewItem {
+    corner-radius: var(--radius-button);
+    margin: 3 10;
+    font-size: 15px;
+    transform-origin: left center;
+}
+
+.sidebar-items NavigationViewItem:hover {
+    transform: translateX(4px) scale(1.02);
+}
+
+/* ---- Playback bar, at the top, above the pages ------------------------------------------------------------------- */
+
+.playbar {
+    backdrop: var(--glass);
+    padding: 6 12;
+}
+
+.transport AppBarButton,
+.transport ToggleButton,
+.transport Button {
+    corner-radius: 50;
+    transform-origin: center;
+}
+
+.transport AppBarButton:hover,
+.transport ToggleButton:hover,
+.transport Button:hover {
+    transform: scale(1.15);
+}
+
+/* The display of the song: a light, rounded card with a shadow. */
+.lcd {
+    corner-radius: 14px;
+    background: linear-gradient(180deg, #33FFFFFF, #14FFFFFF);
+    border-color: #40FFFFFF;
+    border-width: 1px;
+    box-shadow: 12px;
+}
+
+.lcd-artwork-image {
+    box-shadow: 8px;
+    transform-origin: center;
+}
+
+.lcd-artwork-image:hover {
+    transform: scale(1.08);
+}
+
+.track-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.playbar-toggles ToggleButton {
+    corner-radius: var(--radius-button);
+    transform-origin: center;
+}
+
+.playbar-toggles ToggleButton:hover {
+    transform: scale(1.12);
+}
+
+/* ---- Pages: a large glass card ------------------------------------------------------------------------------------- */
+
+.content {
+    backdrop: acrylic($CardBackgroundFillColorDefaultBrush, 0.4);
+    box-shadow: 24px;
+}
+
+/* The font only: a common size would overwrite the page titles. */
+.content-frame TextBlock {
+    font-family: var(--font-body);
+}
+
+.card {
+    corner-radius: 14px;
+    transform-origin: center;
+    transition: transform 160ms;
+}
+
+.card:hover {
+    transform: scale(1.04);
+    box-shadow: 20px;
+}
+
+.artwork {
+    corner-radius: 12px;
+}
+
+.track-row {
+    corner-radius: 10px;
+    transition: background 120ms;
+}
+
+.track-row:hover {
+    background: #1AFFFFFF;
+}
+
+.album-play-button,
+.album-shuffle-button {
+    corner-radius: var(--radius-button);
+    padding: 10 20;
+    transform-origin: center;
+    transition: transform 120ms;
+}
+
+.album-play-button:hover,
+.album-shuffle-button:hover {
+    transform: scale(1.05);
+}
