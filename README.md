@@ -7,7 +7,7 @@ its own repository; this one only holds what the Marketplace offers.
 |---|---|
 | `catalog.json` | Every element, with the address of its archive and the SHA-256 of that archive |
 | `versions.json` | The Apple Music versions that the Ampify kernel accepts |
-| `packages/` | The archives, one `.zip` per element and version |
+| `packages/` | The archives, one `.zip` per element and version, and the preview picture shown on its Marketplace card |
 | `sources/` | The files of each archive, so anyone can read what an element does before installing it |
 
 Ampify downloads an archive only from the address in `catalog.json` and refuses it when its SHA-256 differs from the
@@ -25,7 +25,9 @@ places...), and the Marketplace shows them before the element is switched on.
        --url https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/<id>-<version>.zip
    ```
 
-   The archive is deterministic: the same folder always gives the same hash.
+   The archive is deterministic: the same folder always gives the same hash. When the manifest names a `preview`
+   picture (and up to five `tags`), the picture is copied next to the archive as `<id>-<version>.jpg` (or `.png`) and
+   the catalog entry points to it.
 3. Open a pull request. A new version gets a new archive; the old one stays, so a pinned install keeps working.
 
 An element is accepted when its manifest is valid, it asks only for the permissions its code uses, its code is

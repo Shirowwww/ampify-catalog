@@ -1,0 +1,30 @@
+/* Midnight: night blue, light blue accent. The colors come from the Dark scheme of colors.ini.
+   Apple Music's backgrounds do not read the Fluent brushes: they are targeted by their stable names
+   (docs/themes/names.md). */
+
+/* The background of the window, the sidebar and the playback bar (at the top). */
+.window,
+.navigation,
+.frost {
+    background: $SolidBackgroundFillColorBaseBrush;
+}
+
+.sidebar {
+    background: $LayerFillColorDefaultBrush;
+}
+
+/* The display at the center of the playback bar. */
+.lcd {
+    background: $CardBackgroundFillColorDefaultBrush;
+    corner-radius: 8;
+}
+
+/* The pages area. */
+.page,
+.content {
+    background: $SolidBackgroundFillColorBaseBrush;
+}
+
+TextBlock {
+    color: $TextFillColorPrimaryBrush;
+}

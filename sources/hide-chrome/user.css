@@ -1,0 +1,11 @@
+/* Hides the buttons and banners most people never use, by their stable names (docs/themes/names.md). Remove a line to
+   bring that element back. */
+
+.info-bar,
+.reactions-button,
+.share-button,
+.add-description-button,
+.airplay-button,
+.apple-logo {
+    visibility: collapsed;
+}
