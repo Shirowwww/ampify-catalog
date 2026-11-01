@@ -25,24 +25,6 @@
       "permissions": []
     },
     {
-      "id": "gain-boost",
-      "name": "Output gain",
-      "version": "0.1.2",
-      "kind": "extension",
-      "author": "Shirowwww",
-      "description": "Adds a fixed gain to the decoded sound. The displayed volume does not change, and the kernel's ceiling applies.",
-      "kitApi": "1.0",
-      "tags": [
-        "audio",
-        "volume"
-      ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/gain-boost-0.1.2.zip",
-      "sha256": "343e2326443112f5aa923fa97997d3fcc78ef8d97e8d2a9839d8859c692efbb4",
-      "permissions": [
-        "audio.gain"
-      ]
-    },
-    {
       "id": "glass",
       "name": "Glass",
       "version": "0.2.0",
@@ -83,18 +65,18 @@
     },
     {
       "id": "hello-extension",
-      "name": "Hello",
-      "version": "0.1.1",
+      "name": "Hello (example)",
+      "version": "0.1.2",
       "kind": "extension",
       "author": "Shirowwww",
-      "description": "Minimal example: writes to the log and keeps a launch counter.",
+      "description": "Example to learn from, the smallest one: writes to the log and keeps a launch counter.",
       "kitApi": "1.0",
       "tags": [
         "example",
         "developer"
       ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hello-extension-0.1.1.zip",
-      "sha256": "82d583ab220fb921efc28ff798169ba599ac88e98184ad28625aa20673a3b14e",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hello-extension-0.1.2.zip",
+      "sha256": "04e2201bcd60a42d22570bf93814cd7b9f090f850d5bdd018d61253ecfa514aa",
       "permissions": [
         "storage"
       ]
@@ -136,40 +118,23 @@
     },
     {
       "id": "keyboard-skip",
-      "name": "Skip tracks from the keyboard",
-      "version": "0.1.1",
+      "name": "Skip tracks from the keyboard (example)",
+      "version": "0.1.2",
       "kind": "extension",
       "author": "Shirowwww",
-      "description": "Global shortcuts: Ctrl+Alt+Right for the next track, Ctrl+Alt+Left for the previous one.",
+      "description": "Example to learn from. Global shortcuts: Ctrl+Alt+Right for the next track, Ctrl+Alt+Left for the previous one.",
       "kitApi": "1.0",
       "tags": [
+        "example",
         "keyboard",
         "shortcuts"
       ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/keyboard-skip-0.1.1.zip",
-      "sha256": "691e99aafda67a9dd3ad515d73eab4f0aeb4f651d4f63b99613c7be92680496f",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/keyboard-skip-0.1.2.zip",
+      "sha256": "78202aa1eac12f1ff6a5cf639201b2109637e1d2c8f0a4c845f8e31092e8d572",
       "permissions": [
         "player.control",
         "ui.keyboard"
       ]
-    },
-    {
-      "id": "large-text",
-      "name": "Large text",
-      "version": "0.2.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "Every text 20% larger, titles included, and wider page margins.",
-      "kitApi": "1.0",
-      "tags": [
-        "accessibility",
-        "large-text",
-        "readable"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/large-text-0.2.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/large-text-0.2.0.zip",
-      "sha256": "6d4fd2054789b404e4a87607aaef4b1fe51e64005685ad8ef5178253f81b1ff0",
-      "permissions": []
     },
     {
       "id": "midnight",
@@ -208,25 +173,6 @@
       "permissions": []
     },
     {
-      "id": "now-playing-notify",
-      "name": "Track notification",
-      "version": "0.1.1",
-      "kind": "extension",
-      "author": "Shirowwww",
-      "description": "Shows a notification for each new track. Does not touch the player.",
-      "kitApi": "1.0",
-      "tags": [
-        "notifications",
-        "now-playing"
-      ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/now-playing-notify-0.1.1.zip",
-      "sha256": "acbd9f1dcf59247d53c95ffa39fa758857b9684ba9a9e65aa47590d8f2af4d60",
-      "permissions": [
-        "player.read",
-        "notifications"
-      ]
-    },
-    {
       "id": "paper-light",
       "name": "Light paper",
       "version": "1.1.0",
@@ -263,37 +209,20 @@
       "permissions": []
     },
     {
-      "id": "rounded-buttons",
-      "name": "Rounded buttons",
-      "version": "0.2.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "Replaces the button template with one that has rounded corners.",
-      "kitApi": "1.0",
-      "tags": [
-        "template",
-        "rounded",
-        "buttons"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rounded-buttons-0.2.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rounded-buttons-0.2.0.zip",
-      "sha256": "ea782ee19e451d55019c1701af397520c79a8561017b8579370307db94be97a3",
-      "permissions": []
-    },
-    {
       "id": "sleep-timer",
-      "name": "Sleep timer",
-      "version": "0.1.1",
+      "name": "Sleep timer (example)",
+      "version": "0.1.2",
       "kind": "extension",
       "author": "Shirowwww",
-      "description": "Pauses playback after a delay, set in minutes, then lets you know.",
+      "description": "Example to learn from. Pauses playback after a delay, set in minutes, then lets you know.",
       "kitApi": "1.0",
       "tags": [
+        "example",
         "timer",
         "sleep"
       ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sleep-timer-0.1.1.zip",
-      "sha256": "36903de41a8f09fa21fb0d617f874b53d63e1410b1ca0f2d195c0a833057f086",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sleep-timer-0.1.2.zip",
+      "sha256": "d8b1d4eafda64ee6f6f503ea54e20f420d5b9f6cd740ca769c7119fdb73f7e68",
       "permissions": [
         "player.control",
         "notifications"
