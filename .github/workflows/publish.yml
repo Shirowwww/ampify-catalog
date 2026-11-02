@@ -1,0 +1,63 @@
+name: Publish
+
+# After a merge that touches sources/: packs each changed element into packages/ and lists it in catalog.json.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "sources/**"
+
+permissions:
+  contents: read
+
+# One run at a time, so two merges close together do not push over each other.
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the catalog
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Check out the tools of Ampify
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Shirowwww/ampify
+          ref: main
+          path: ampify
+          sparse-checkout: |
+            tools
+            schemas
+          persist-credentials: false
+
+      - name: Pack the changed elements
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          git diff --name-only "$BEFORE" "$AFTER" -- sources > "$RUNNER_TEMP/changed.txt"
+          python3 .github/scripts/catalog_ci.py publish \
+            --ampify ampify \
+            --changed "$RUNNER_TEMP/changed.txt" \
+            --message "$RUNNER_TEMP/message.txt"
+          python3 ampify/tools/validate.py catalog catalog.json
+
+      - name: Commit and push
+        run: |
+          git add catalog.json packages
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -F "$RUNNER_TEMP/message.txt"
+          git push origin HEAD:main

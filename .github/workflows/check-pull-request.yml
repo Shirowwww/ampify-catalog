@@ -1,0 +1,59 @@
+name: Check pull request
+
+# Reads the proposed element with the tools of Ampify and writes a summary. The token is read-only, as it must be for a
+# pull request from a fork: comment.yml posts the summary afterwards.
+on:
+  pull_request:
+    paths:
+      - "sources/**"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the pull request
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+
+      - name: Check out the tools of Ampify
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Shirowwww/ampify
+          ref: main
+          path: ampify
+          sparse-checkout: |
+            tools
+            schemas
+          persist-credentials: false
+
+      - name: Check the changed elements
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/out"
+          # The checkout is the merge of the pull request: its first parent is the branch it targets.
+          git diff --name-only HEAD^1 HEAD > "$RUNNER_TEMP/changed.txt"
+          git show HEAD^1:catalog.json > "$RUNNER_TEMP/base-catalog.json"
+          echo "$PR_NUMBER" > "$RUNNER_TEMP/out/number.txt"
+          status=0
+          python3 .github/scripts/catalog_ci.py check \
+            --ampify ampify \
+            --changed "$RUNNER_TEMP/changed.txt" \
+            --base-catalog "$RUNNER_TEMP/base-catalog.json" \
+            --summary "$RUNNER_TEMP/out/summary.md" || status=$?
+          cat "$RUNNER_TEMP/out/summary.md" >> "$GITHUB_STEP_SUMMARY"
+          exit $status
+
+      - name: Keep the summary for the comment
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: check-summary
+          path: ${{ runner.temp }}/out
+          retention-days: 3
+          if-no-files-found: ignore
