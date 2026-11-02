@@ -36,7 +36,9 @@ A check runs on every pull request and comments with its result. It refuses an e
 - its `version` is not higher than the one in `catalog.json`, or its archive already exists;
 - its code calls something (`Ampify.http`, `Ampify.storage`, `Ampify.notify`...) without declaring the permission;
 - a script looks minified or obfuscated (a line of more than 400 characters, names like `_0x1f3a`);
-- the pull request changes `packages/` or `catalog.json`.
+- the pull request changes `packages/` or `catalog.json`, or more than one element;
+- its `author` is not the GitHub login that sends the pull request. An element stays with the account that sent it
+  first: only that account can send a new version.
 
 The check does not replace a person: a maintainer reads the code, and the permissions it asks for, before merging. An
 element must also reach no host beyond the ones it declares.

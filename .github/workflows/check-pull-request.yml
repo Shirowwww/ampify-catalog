@@ -34,6 +34,8 @@ jobs:
       - name: Check the changed elements
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          OWNER: ${{ github.repository_owner }}
         run: |
           mkdir -p "$RUNNER_TEMP/out"
           # The checkout is the merge of the pull request: its first parent is the branch it targets.
@@ -45,6 +47,8 @@ jobs:
             --ampify ampify \
             --changed "$RUNNER_TEMP/changed.txt" \
             --base-catalog "$RUNNER_TEMP/base-catalog.json" \
+            --pr-author "$PR_AUTHOR" \
+            --owner "$OWNER" \
             --summary "$RUNNER_TEMP/out/summary.md" || status=$?
           cat "$RUNNER_TEMP/out/summary.md" >> "$GITHUB_STEP_SUMMARY"
           exit $status

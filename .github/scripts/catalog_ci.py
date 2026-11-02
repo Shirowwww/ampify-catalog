@@ -121,7 +121,21 @@ def version_errors(manifest, published):
     return errors
 
 
-def check_element(pack, identifier, published):
+def author_errors(manifest, owners, pr_author):
+    """An element belongs to the GitHub account that sent it first: its `author` is that login, and only that account
+    (or the catalog's owner, who passes no pr_author) may send a new version."""
+    if not pr_author:
+        return []
+    expected = owners.get(manifest["id"], manifest.get("author", ""))
+    if expected.lower() == pr_author.lower() and manifest.get("author", "").lower() == pr_author.lower():
+        return []
+    if manifest["id"] in owners:
+        return [f"`{manifest['id']}` belongs to {expected}: only that account can send a new version"]
+    return [f"author is {manifest.get('author', '')!r}, but the pull request comes from {pr_author}: "
+            "use your GitHub login as `author`"]
+
+
+def check_element(pack, identifier, published, owners=None, pr_author=""):
     """Returns (manifest or None, errors) for sources/<identifier>."""
     folder = os.path.join(ROOT, "sources", identifier)
     if not os.path.isdir(folder):
@@ -131,6 +145,7 @@ def check_element(pack, identifier, published):
     except pack.PackError as error:
         return None, [line.split(": ", 1)[-1] for line in str(error).splitlines()]
     errors = version_errors(manifest, published) + permission_errors(folder, manifest) + readability_errors(folder)
+    errors += author_errors(manifest, owners or {}, pr_author)
     return manifest, errors
 
 
@@ -154,19 +169,26 @@ def summary_lines(identifier, manifest, errors):
 def check(args):
     pack = import_tools(args.ampify)
     ids, others = split_changes(read_lines(args.changed))
-    published = {}
+    published, owners = {}, {}
     if os.path.isfile(args.base_catalog):
         with open(args.base_catalog, encoding="utf-8") as handle:
-            published = {item["id"]: item["version"] for item in json.load(handle)["extensions"]}
+            entries = json.load(handle)["extensions"]
+        published = {item["id"]: item["version"] for item in entries}
+        owners = {item["id"]: item.get("author", "") for item in entries}
+    # The catalog's owner may change several elements at once and keeps the elements without an author check.
+    pr_author = "" if (args.pr_author or "").lower() == (args.owner or "").lower() else (args.pr_author or "")
 
     lines, failed = ["### Catalog check", ""], False
+    if pr_author and len(ids) > 1:
+        failed = True
+        lines += [f"- This pull request changes {len(ids)} elements. Send one element per pull request."]
     protected = [path for path in others if path == "catalog.json" or path.startswith("packages/")]
     if protected:
         failed = True
         lines += ["- This pull request changes files that the bot writes after the merge "
                   f"({', '.join(f'`{plain(path)}`' for path in protected)}). Keep only `sources/<id>/`."]
     for identifier in ids:
-        manifest, errors = check_element(pack, identifier, published)
+        manifest, errors = check_element(pack, identifier, published, owners, pr_author)
         failed = failed or bool(errors)
         lines += summary_lines(identifier, manifest, errors)
     if not ids:
@@ -238,6 +260,8 @@ def main(argv=None):
         if name == "check":
             sub.add_argument("--base-catalog", required=True, help="catalog.json as it was before the change")
             sub.add_argument("--summary", required=True, help="where to write the Markdown summary")
+            sub.add_argument("--pr-author", default="", help="GitHub login of the pull request's author")
+            sub.add_argument("--owner", default="", help="GitHub login of the catalog's owner")
         else:
             sub.add_argument("--message", required=True, help="where to write the commit message")
     args = parser.parse_args(argv)
