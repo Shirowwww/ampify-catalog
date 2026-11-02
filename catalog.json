@@ -8,7 +8,7 @@
     {
       "id": "artwork",
       "name": "Artwork",
-      "version": "0.2.0",
+      "version": "0.4.0",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "The artwork of the current track fills the window, under dark glass panels that float.",
@@ -19,15 +19,129 @@
         "glass",
         "immersive"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-0.2.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-0.2.0.zip",
-      "sha256": "a54b9b1fb5dfee59fcd85f09107ed27b3cb69ce2d38ac6f50bb1ea6ff10e3f71",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-0.4.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-0.4.0.zip",
+      "sha256": "0447f09ee163f7639471bb25edd8523f14ce3787600eb4409788711e02ce484e",
+      "permissions": []
+    },
+    {
+      "id": "catppuccin",
+      "name": "Catppuccin",
+      "version": "1.0.0",
+      "kind": "theme",
+      "author": "Shirowwww",
+      "description": "The soothing pastel palettes of Catppuccin (Mocha, Macchiato, Frappe, Latte) on soft, rounded floating panels, with mauve as the accent. Palette by the Catppuccin community (MIT).",
+      "kitApi": "1.0",
+      "tags": [
+        "dark",
+        "light",
+        "pastel",
+        "layout"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/catppuccin-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/catppuccin-1.0.0.zip",
+      "sha256": "930d4ea1e2aed596428a2e5747a1b00becd425e1fb1d5d8abbdb7dc51d190cb4",
+      "permissions": []
+    },
+    {
+      "id": "comfy",
+      "name": "Comfy",
+      "version": "1.0.0",
+      "kind": "theme",
+      "author": "Shirowwww",
+      "description": "A cosy slate look inspired by Spicetify's Comfy: big rounded panels with generous gaps, soft text, round artwork and a periwinkle accent. The Mono scheme keeps the shapes in greys.",
+      "kitApi": "1.0",
+      "tags": [
+        "dark",
+        "blue",
+        "rounded",
+        "layout"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/comfy-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/comfy-1.0.0.zip",
+      "sha256": "0114803657091b421dfbccc2cdfc9fc1ffea1a61ea2beb00f697557f1b56d5c9",
+      "permissions": []
+    },
+    {
+      "id": "discord-presence",
+      "name": "Discord presence (example)",
+      "version": "0.2.0",
+      "kind": "extension",
+      "author": "Shirowwww",
+      "description": "Example to learn from. Your Discord status shows what you listen to: cover, artist, album, progress bar, links and buttons. Turn it on with Discord open. A cover Apple's catalog lacks (your own files) goes to a free host that deletes it within 3 days; this can be turned off.",
+      "kitApi": "1.0",
+      "tags": [
+        "example"
+      ],
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/discord-presence-0.2.0.zip",
+      "sha256": "0c9c55336a96815ef5883399fcb20417048e6aa494c3fbf779157ea2d9359438",
+      "permissions": [
+        "player.read",
+        "storage",
+        "ipc.discord",
+        "network:itunes.apple.com",
+        "network:litterbox.catbox.moe",
+        "network:uguu.se"
+      ]
+    },
+    {
+      "id": "display-equalizer",
+      "name": "Display equalizer",
+      "version": "0.1.0",
+      "kind": "snippet",
+      "author": "Shirowwww",
+      "description": "An animated equalizer GIF at the right end of the song's display, behind its text: an example of ::before with content: url(...).",
+      "kitApi": "1.0",
+      "tags": [
+        "decoration",
+        "gif"
+      ],
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-0.1.0.zip",
+      "sha256": "338acaa8ca36ac3c8f192f6b80399963b2c19df63378e0aa2e02f30c8f573726",
+      "permissions": []
+    },
+    {
+      "id": "dracula",
+      "name": "Dracula",
+      "version": "1.0.0",
+      "kind": "theme",
+      "author": "Shirowwww",
+      "description": "The Dracula dark palette on floating panels: purple accent, and pink to mark what is playing. Palette by Zeno Rocha and the Dracula community (MIT).",
+      "kitApi": "1.0",
+      "tags": [
+        "dark",
+        "purple",
+        "layout"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/dracula-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/dracula-1.0.0.zip",
+      "sha256": "a1185e21045579531b4927aead992fb7461ce1d88e1f0c70e44d063b86c09268",
+      "permissions": []
+    },
+    {
+      "id": "dribbblish",
+      "name": "Dribbblish",
+      "version": "1.0.0",
+      "kind": "theme",
+      "author": "Shirowwww",
+      "description": "Inspired by Spicetify's Dribbblish: the sidebar is a rounded card in the accent color, and everything else is round and flat. Schemes Purple, Dark, White and Nord-dark, with no gradients.",
+      "kitApi": "1.0",
+      "tags": [
+        "dark",
+        "light",
+        "purple",
+        "rounded",
+        "layout"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/dribbblish-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/dribbblish-1.0.0.zip",
+      "sha256": "8c1a64b67a7e26f970fd9715197209759e78e66c0888d8447e0c1632dbff4eb0",
       "permissions": []
     },
     {
       "id": "glass",
       "name": "Glass",
-      "version": "0.2.0",
+      "version": "0.3.1",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "A complete redesign: gradient and acrylic backgrounds, large rounded cards, larger text, buttons that grow on hover, shadows.",
@@ -39,15 +153,15 @@
         "dark",
         "light"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-0.2.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-0.2.0.zip",
-      "sha256": "513a742b0f4abf4e08e997bf1d66b20742eaa2b2c04f837c178c7f11ba5ed3c2",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-0.3.1.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-0.3.1.zip",
+      "sha256": "fab25c0a1c70d09288bcc5778ca04bf8d4f84b0e72ce3bbedb82adcee341ea74",
       "permissions": []
     },
     {
       "id": "greenroom",
       "name": "Greenroom",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "A familiar layout from another music app: the playback bar at the bottom across the window, the track on the left, rounded dark panels and a green accent.",
@@ -58,15 +172,34 @@
         "green",
         "redesign"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-0.2.1.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-0.2.1.zip",
-      "sha256": "cece47ebf3d0b9be74a03d19ab2ee4f3dc43bbf8a2cb7ef7988a59e048d65ebf",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-0.3.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-0.3.0.zip",
+      "sha256": "c4a93fb1feaed5702bbdfee266ae0bc041d85ac57b5452ecb17bf0b5bb5b0d19",
+      "permissions": []
+    },
+    {
+      "id": "gruvbox",
+      "name": "Gruvbox",
+      "version": "1.0.0",
+      "kind": "theme",
+      "author": "Shirowwww",
+      "description": "Retro groove: the warm, earthy gruvbox palettes (Dark, Light) with a yellow accent, square-ish panels and monospaced titles. Palette by Pavel Pertsev (MIT).",
+      "kitApi": "1.0",
+      "tags": [
+        "dark",
+        "light",
+        "warm",
+        "layout"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/gruvbox-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/gruvbox-1.0.0.zip",
+      "sha256": "e769601073b728f9bedee7c830983272a07600e220bb96802b09ec4a36bde63b",
       "permissions": []
     },
     {
       "id": "hello-extension",
       "name": "Hello (example)",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "kind": "extension",
       "author": "Shirowwww",
       "description": "Example to learn from, the smallest one: writes to the log and keeps a launch counter.",
@@ -75,8 +208,8 @@
         "example",
         "developer"
       ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hello-extension-0.1.2.zip",
-      "sha256": "04e2201bcd60a42d22570bf93814cd7b9f090f850d5bdd018d61253ecfa514aa",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hello-extension-0.1.3.zip",
+      "sha256": "dd860245d7d9e31886df99b5c827ea295a30dba2bb1499f5164795027114a304",
       "permissions": [
         "storage"
       ]
@@ -84,7 +217,7 @@
     {
       "id": "hide-chrome",
       "name": "Hide chrome",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "Hides the buttons and banners most people never use: reactions, share, AirPlay, info banners.",
@@ -93,15 +226,15 @@
         "minimal",
         "declutter"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-chrome-0.2.1.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-chrome-0.2.1.zip",
-      "sha256": "91b3f7cdd74525ecef06ea3038e42c40b2902d624a38b7e9529f8100884b7772",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-chrome-0.2.2.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-chrome-0.2.2.zip",
+      "sha256": "2f585b7298beb8afaea8c1d90d122b60a7d85dd8937c4c4b22061531ea05e582",
       "permissions": []
     },
     {
       "id": "high-contrast",
       "name": "High contrast",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "Black and white, with bright colors for buttons and selections.",
@@ -111,15 +244,15 @@
         "contrast",
         "dark"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.1.1.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.1.1.zip",
-      "sha256": "defdc3a2c7b3893215d5441f19ba7b904b9f995a8f95cdcbc50a32b0f50733d0",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.1.2.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.1.2.zip",
+      "sha256": "62a32c30595e7c5b8421f75b0a709c05cfc9f7eaf6caa9a05936f691e027ad68",
       "permissions": []
     },
     {
       "id": "keyboard-skip",
       "name": "Skip tracks from the keyboard (example)",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "kind": "extension",
       "author": "Shirowwww",
       "description": "Example to learn from. Global shortcuts: Ctrl+Alt+Right for the next track, Ctrl+Alt+Left for the previous one.",
@@ -129,8 +262,8 @@
         "keyboard",
         "shortcuts"
       ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/keyboard-skip-0.1.2.zip",
-      "sha256": "78202aa1eac12f1ff6a5cf639201b2109637e1d2c8f0a4c845f8e31092e8d572",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/keyboard-skip-0.1.3.zip",
+      "sha256": "0f1780f25a8646268b35bfbf907fd66ebdbb46a90d836a918482053b61c49f02",
       "permissions": [
         "player.control",
         "ui.keyboard"
@@ -139,43 +272,44 @@
     {
       "id": "midnight",
       "name": "Midnight",
-      "version": "0.2.0",
+      "version": "0.4.0",
       "kind": "theme",
       "author": "Shirowwww",
-      "description": "Night blue with a light blue accent, using the Dark scheme of colors.ini.",
+      "description": "An ink-blue night: the sidebar and the pages float as rounded panels, with a pale moonlight accent.",
       "kitApi": "1.0",
       "tags": [
         "dark",
         "blue",
-        "colors"
+        "layout"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/midnight-0.2.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/midnight-0.2.0.zip",
-      "sha256": "d2f37f51f74e6675d32f1b7b3d971f99829a6d784aff9d854bb93b14e6b7bc74",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/midnight-0.4.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/midnight-0.4.0.zip",
+      "sha256": "05c726c75c739cc9db9214167769c75358dfd3d001966315809461d363fae5a8",
       "permissions": []
     },
     {
-      "id": "night-blue",
-      "name": "Night blue",
-      "version": "1.1.1",
+      "id": "nord",
+      "name": "Nord",
+      "version": "1.0.0",
       "kind": "theme",
       "author": "Shirowwww",
-      "description": "Night blue theme, with a dark scheme and a light scheme.",
+      "description": "An arctic, calm and flat look: Polar Night (dark) or Snow Storm (light), little contrast between the panels and a frost blue accent. Palette by Arctic Ice Studio (MIT).",
       "kitApi": "1.0",
       "tags": [
         "dark",
+        "light",
         "blue",
-        "colors"
+        "layout"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/night-blue-1.1.1.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/night-blue-1.1.1.zip",
-      "sha256": "beb3d312b195d65dd23d4fc0194e4cc584a3f5ef62d73770625259d2a297e2e5",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/nord-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/nord-1.0.0.zip",
+      "sha256": "4897373baed1baba6b886bf3d6bd0aa99a812f90bb6e45ff58c866ec1564b499",
       "permissions": []
     },
     {
       "id": "paper-light",
       "name": "Light paper",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "Plain, light paper theme, with an optional dark scheme.",
@@ -185,15 +319,32 @@
         "minimal",
         "colors"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.1.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.1.zip",
-      "sha256": "8af5f0a64af7860136fbec4f43c6b5764b5f46d7bc01a19445a1a3ec8ca892bd",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.2.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.2.zip",
+      "sha256": "7b9dc44f7f874fea1e79fff6e31699372d1af2f2ce1ebf03f64924150ec57406",
       "permissions": []
+    },
+    {
+      "id": "react-panel",
+      "name": "React panel (example)",
+      "version": "0.1.2",
+      "kind": "extension",
+      "author": "Shirowwww",
+      "description": "Example to learn from. A panel written like React, without JSX: counter, timer and settings with Ampify.React and Ampify.components.",
+      "kitApi": "1.0",
+      "tags": [
+        "example"
+      ],
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/react-panel-0.1.2.zip",
+      "sha256": "439c9e5a0da9aa9ff5b511fb428bb0bde189c1fe93c1aef47452fc1527e4dc80",
+      "permissions": [
+        "ui.panel"
+      ]
     },
     {
       "id": "rose-gold",
       "name": "Rose gold",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "Warm brown-black panels and a rose gold play button, display and volume. A dark scheme and a light one.",
@@ -203,15 +354,55 @@
         "warm",
         "colors"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.2.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.2.0.zip",
-      "sha256": "df33a4a2698c8a59aec25bbe6cee47496b2ceb159432e60402727cfab577b007",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.2.1.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.2.1.zip",
+      "sha256": "09e7d4158808aa9d3af8f43c74643289c702f14f0da522bbcce537c1f077e332",
       "permissions": []
+    },
+    {
+      "id": "rose-pine",
+      "name": "Rosé Pine",
+      "version": "1.0.0",
+      "kind": "theme",
+      "author": "Shirowwww",
+      "description": "All natural pine, faux fur and a bit of soho vibes: the Rosé Pine palettes (Main, Moon, Dawn) with iris and rose accents, round panels and pill-shaped playback display. Palette by the Rosé Pine community (MIT).",
+      "kitApi": "1.0",
+      "tags": [
+        "dark",
+        "light",
+        "purple",
+        "layout"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-pine-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-pine-1.0.0.zip",
+      "sha256": "acf51512071b53121c176eeb9c397772ef3c1b7f1a151c343ad1851be0536883",
+      "permissions": []
+    },
+    {
+      "id": "scrobbler",
+      "name": "Last.fm scrobbler (example)",
+      "version": "0.2.0",
+      "kind": "extension",
+      "author": "Shirowwww",
+      "description": "Example to learn from. Sends the tracks you listen to to Last.fm (scrobbling). Turn it on, allow Ampify on the Last.fm page that opens, and you are done. Plays that could not be sent wait in storage.",
+      "kitApi": "1.0",
+      "tags": [
+        "example"
+      ],
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/scrobbler-0.2.0.zip",
+      "sha256": "3a7de01ce57b9f8f3fbb2aa743ccf99353962f4400689e2a638724a67f217a23",
+      "permissions": [
+        "player.read",
+        "storage",
+        "notifications",
+        "network:ws.audioscrobbler.com",
+        "network:www.last.fm"
+      ]
     },
     {
       "id": "sleep-timer",
       "name": "Sleep timer (example)",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "kind": "extension",
       "author": "Shirowwww",
       "description": "Example to learn from. Pauses playback after a delay, set in minutes, then lets you know.",
@@ -221,12 +412,59 @@
         "timer",
         "sleep"
       ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sleep-timer-0.1.3.zip",
-      "sha256": "16352d10ba5d638b2e70ed364cce4513b6de0acea27c3cd3d51407c998fedfc5",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sleep-timer-0.1.4.zip",
+      "sha256": "0b9b46863efa4eb1a5b44d19c7be025c41b1825789961bb24af59c0fc9f89b90",
       "permissions": [
         "player.control",
         "notifications"
       ]
+    },
+    {
+      "id": "spinning-artwork",
+      "name": "Spinning artwork",
+      "version": "0.1.0",
+      "kind": "snippet",
+      "author": "Shirowwww",
+      "description": "Example snippet: the artwork of the playback bar turns like a record, with @keyframes and animation.",
+      "kitApi": "1.0",
+      "tags": [
+        "animation",
+        "artwork"
+      ],
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-0.1.0.zip",
+      "sha256": "554ff8c9d96ebda60432b8feeca543f46f47b9f6da01bb716ec742e3c77b7d98",
+      "permissions": []
+    },
+    {
+      "id": "square-corners",
+      "name": "Square corners",
+      "version": "0.1.0",
+      "kind": "snippet",
+      "author": "Shirowwww",
+      "description": "Example snippet: removes the rounding of buttons and frames, on top of any theme.",
+      "kitApi": "1.0",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-0.1.0.zip",
+      "sha256": "675733702a8acc1cd388dc1b2a11ef9333e4f3fd6edaa991dfb99f076021457a",
+      "permissions": []
+    },
+    {
+      "id": "tokyo-night",
+      "name": "Tokyo Night",
+      "version": "1.0.0",
+      "kind": "theme",
+      "author": "Shirowwww",
+      "description": "A clean, dark theme that celebrates the lights of downtown Tokyo at night: the Night, Storm and Day palettes, a blue accent and a rounded-square play button. Palette by enkia and folke (MIT).",
+      "kitApi": "1.0",
+      "tags": [
+        "dark",
+        "light",
+        "blue",
+        "layout"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/tokyo-night-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/tokyo-night-1.0.0.zip",
+      "sha256": "ed5eee46f03be54ccccb297c8a91c898751734da54f9fa33249f17c3c773a007",
+      "permissions": []
     }
   ]
 }
