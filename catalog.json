@@ -84,7 +84,7 @@
     {
       "id": "hide-chrome",
       "name": "Hide chrome",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "Hides the buttons and banners most people never use: reactions, share, AirPlay, info banners.",
@@ -93,15 +93,15 @@
         "minimal",
         "declutter"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-chrome-0.2.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-chrome-0.2.0.zip",
-      "sha256": "b2d91d56c14a3758c93690376e532897dc1be7a540ba6cfd4bd9b35e325de49d",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-chrome-0.2.1.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-chrome-0.2.1.zip",
+      "sha256": "91b3f7cdd74525ecef06ea3038e42c40b2902d624a38b7e9529f8100884b7772",
       "permissions": []
     },
     {
       "id": "high-contrast",
       "name": "High contrast",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "Black and white, with bright colors for buttons and selections.",
@@ -111,9 +111,9 @@
         "contrast",
         "dark"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.1.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.1.0.zip",
-      "sha256": "c5c151cbc30939726083dadd2ab55054876920f8817c85a929a6881650c2b7cc",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.1.1.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.1.1.zip",
+      "sha256": "defdc3a2c7b3893215d5441f19ba7b904b9f995a8f95cdcbc50a32b0f50733d0",
       "permissions": []
     },
     {
@@ -157,7 +157,7 @@
     {
       "id": "night-blue",
       "name": "Night blue",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "Night blue theme, with a dark scheme and a light scheme.",
@@ -167,15 +167,15 @@
         "blue",
         "colors"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/night-blue-1.1.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/night-blue-1.1.0.zip",
-      "sha256": "ca68da27a3838f4ef71574b4eace4a128345acde46078d0ecc6d7f1634718a5f",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/night-blue-1.1.1.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/night-blue-1.1.1.zip",
+      "sha256": "beb3d312b195d65dd23d4fc0194e4cc584a3f5ef62d73770625259d2a297e2e5",
       "permissions": []
     },
     {
       "id": "paper-light",
       "name": "Light paper",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "Plain, light paper theme, with an optional dark scheme.",
@@ -185,27 +185,27 @@
         "minimal",
         "colors"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.0.zip",
-      "sha256": "c79047313ec32beecdd72214252d024f5ccb80cd02eebf170fcfb4237313a175",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.1.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.1.zip",
+      "sha256": "8af5f0a64af7860136fbec4f43c6b5764b5f46d7bc01a19445a1a3ec8ca892bd",
       "permissions": []
     },
     {
       "id": "rose-gold",
       "name": "Rose gold",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "kind": "theme",
       "author": "Shirowwww",
-      "description": "Warm rose gold theme, with a dark scheme and a light scheme.",
+      "description": "Warm brown-black panels and a rose gold play button, display and volume. A dark scheme and a light one.",
       "kitApi": "1.0",
       "tags": [
         "dark",
         "warm",
         "colors"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.1.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.1.0.zip",
-      "sha256": "84cce1b78aed775d8470b8a90472c917172ef011f5144db9c54f35d0492b14f6",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.2.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.2.0.zip",
+      "sha256": "df33a4a2698c8a59aec25bbe6cee47496b2ceb159432e60402727cfab577b007",
       "permissions": []
     },
     {
