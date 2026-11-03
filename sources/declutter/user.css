@@ -1,5 +1,5 @@
-/* Hides the buttons and banners most people never use, by their stable names (docs/themes/names.md). Remove a line to
-   bring that element back. */
+/* Declutter: hides the buttons and banners most people never use, by their stable names (docs/themes/names.md), on
+   top of any theme. Remove a line to bring that element back. */
 
 .info-bar,
 .reactions-button,

@@ -25,44 +25,6 @@
       "permissions": []
     },
     {
-      "id": "catppuccin",
-      "name": "Catppuccin",
-      "version": "1.0.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "The soothing pastel palettes of Catppuccin (Mocha, Macchiato, Frappe, Latte) on soft, rounded floating panels, with mauve as the accent. Palette by the Catppuccin community (MIT).",
-      "kitApi": "1.0",
-      "tags": [
-        "dark",
-        "light",
-        "pastel",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/catppuccin-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/catppuccin-1.0.0.zip",
-      "sha256": "930d4ea1e2aed596428a2e5747a1b00becd425e1fb1d5d8abbdb7dc51d190cb4",
-      "permissions": []
-    },
-    {
-      "id": "comfy",
-      "name": "Comfy",
-      "version": "1.0.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "A cosy slate look inspired by Spicetify's Comfy: big rounded panels with generous gaps, soft text, round artwork and a periwinkle accent. The Mono scheme keeps the shapes in greys.",
-      "kitApi": "1.0",
-      "tags": [
-        "dark",
-        "blue",
-        "rounded",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/comfy-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/comfy-1.0.0.zip",
-      "sha256": "0114803657091b421dfbccc2cdfc9fc1ffea1a61ea2beb00f697557f1b56d5c9",
-      "permissions": []
-    },
-    {
       "id": "discord-presence",
       "name": "Discord presence",
       "version": "0.2.1",
@@ -100,44 +62,6 @@
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-0.1.1.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-0.1.1.zip",
       "sha256": "1ff86b1266ac1a97568e727ffc13bbe7769de496aec8112ae3b7a0d4a74ccdd8",
-      "permissions": []
-    },
-    {
-      "id": "dracula",
-      "name": "Dracula",
-      "version": "1.0.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "The Dracula dark palette on floating panels: purple accent, and pink to mark what is playing. Palette by Zeno Rocha and the Dracula community (MIT).",
-      "kitApi": "1.0",
-      "tags": [
-        "dark",
-        "purple",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/dracula-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/dracula-1.0.0.zip",
-      "sha256": "a1185e21045579531b4927aead992fb7461ce1d88e1f0c70e44d063b86c09268",
-      "permissions": []
-    },
-    {
-      "id": "dribbblish",
-      "name": "Dribbblish",
-      "version": "1.0.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "Inspired by Spicetify's Dribbblish: the sidebar is a rounded card in the accent color, and everything else is round and flat. Schemes Purple, Dark, White and Nord-dark, with no gradients.",
-      "kitApi": "1.0",
-      "tags": [
-        "dark",
-        "light",
-        "purple",
-        "rounded",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/dribbblish-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/dribbblish-1.0.0.zip",
-      "sha256": "8c1a64b67a7e26f970fd9715197209759e78e66c0888d8447e0c1632dbff4eb0",
       "permissions": []
     },
     {
@@ -180,25 +104,6 @@
       "permissions": []
     },
     {
-      "id": "gruvbox",
-      "name": "Gruvbox",
-      "version": "1.0.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "Retro groove: the warm, earthy gruvbox palettes (Dark, Light) with a yellow accent, square-ish panels and monospaced titles. Palette by Pavel Pertsev (MIT).",
-      "kitApi": "1.0",
-      "tags": [
-        "dark",
-        "light",
-        "warm",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/gruvbox-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/gruvbox-1.0.0.zip",
-      "sha256": "e769601073b728f9bedee7c830983272a07600e220bb96802b09ec4a36bde63b",
-      "permissions": []
-    },
-    {
       "id": "hello-extension",
       "name": "Hello (example)",
       "version": "0.1.4",
@@ -216,23 +121,6 @@
       "permissions": [
         "storage"
       ]
-    },
-    {
-      "id": "hide-chrome",
-      "name": "Hide chrome",
-      "version": "0.2.2",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "Hides the buttons and banners most people never use: reactions, share, AirPlay, info banners.",
-      "kitApi": "1.0",
-      "tags": [
-        "minimal",
-        "declutter"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-chrome-0.2.2.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-chrome-0.2.2.zip",
-      "sha256": "2f585b7298beb8afaea8c1d90d122b60a7d85dd8937c4c4b22061531ea05e582",
-      "permissions": []
     },
     {
       "id": "high-contrast",
@@ -292,25 +180,6 @@
       "permissions": []
     },
     {
-      "id": "nord",
-      "name": "Nord",
-      "version": "1.0.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "An arctic, calm and flat look: Polar Night (dark) or Snow Storm (light), little contrast between the panels and a frost blue accent. Palette by Arctic Ice Studio (MIT).",
-      "kitApi": "1.0",
-      "tags": [
-        "dark",
-        "light",
-        "blue",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/nord-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/nord-1.0.0.zip",
-      "sha256": "4897373baed1baba6b886bf3d6bd0aa99a812f90bb6e45ff58c866ec1564b499",
-      "permissions": []
-    },
-    {
       "id": "paper-light",
       "name": "Light paper",
       "version": "1.1.2",
@@ -362,25 +231,6 @@
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.2.1.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.2.1.zip",
       "sha256": "09e7d4158808aa9d3af8f43c74643289c702f14f0da522bbcce537c1f077e332",
-      "permissions": []
-    },
-    {
-      "id": "rose-pine",
-      "name": "Rosé Pine",
-      "version": "1.0.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "All natural pine, faux fur and a bit of soho vibes: the Rosé Pine palettes (Main, Moon, Dawn) with iris and rose accents, round panels and pill-shaped playback display. Palette by the Rosé Pine community (MIT).",
-      "kitApi": "1.0",
-      "tags": [
-        "dark",
-        "light",
-        "purple",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-pine-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-pine-1.0.0.zip",
-      "sha256": "acf51512071b53121c176eeb9c397772ef3c1b7f1a151c343ad1851be0536883",
       "permissions": []
     },
     {
@@ -454,25 +304,6 @@
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-0.1.1.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-0.1.1.zip",
       "sha256": "38a5b16e70702d5679ba087cbcea2eba70c1b4ef9385f8bfc9ce9a936c79fde9",
-      "permissions": []
-    },
-    {
-      "id": "tokyo-night",
-      "name": "Tokyo Night",
-      "version": "1.0.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "A clean, dark theme that celebrates the lights of downtown Tokyo at night: the Night, Storm and Day palettes, a blue accent and a rounded-square play button. Palette by enkia and folke (MIT).",
-      "kitApi": "1.0",
-      "tags": [
-        "dark",
-        "light",
-        "blue",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/tokyo-night-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/tokyo-night-1.0.0.zip",
-      "sha256": "ed5eee46f03be54ccccb297c8a91c898751734da54f9fa33249f17c3c773a007",
       "permissions": []
     }
   ]

@@ -2,7 +2,8 @@
    airier text, buttons that grow on hover, shadows under the cards.
 
    The floating-panels layout lines the panels up (docs/themes/format.md, "Ready-made layouts"); the classes are
-   Ampify's stable names for Apple Music's zones (docs/themes/names.md). */
+   Ampify's stable names for Apple Music's zones (docs/themes/names.md). Its settings (manifest.json) show in the
+   Ampify card of Apple Music's settings. */
 
 :root {
     --font-title: "Segoe UI Variable Display";
@@ -11,28 +12,32 @@
     --font-body: "Segoe UI Variable Text";
     --font-body-size: 15px;
     --window-background: linear-gradient(135deg, #0E1424 0%, #1A2240 55%, #2A1F45 100%);
-    --panel-radius: 18px;
-    --gap: 12;
+    --panel-radius: var(--setting-panel-radius);
+    --gap: var(--setting-gap);
     --radius-button: 12px;
-    --glass: acrylic($LayerFillColorDefaultBrush, 0.55);
+    --glass: acrylic($LayerFillColorDefaultBrush, var(--setting-frost));
+    --band-background: #0FFFFFFF;
 }
 
 @import "ampify:floating-panels";
 
 /* ---- Sidebar: frosted glass ---------------------------------------------------------------------------------------- */
 
-.sidebar {
+.sidebar,
+.lyrics-panel {
     backdrop: var(--glass);
 }
 
 /* The logo stays where Apple Music puts it: over the icons of the folded sidebar, clear of the menu button. */
 .sidebar-header {
-    padding: 4 8 8 0;
+    padding: 0 8 12 0;
 }
 
+/* Quieter than the page titles: at 22 bold, the app's name outweighed everything else on the window. */
 .app-name {
     font-role: title;
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .sidebar-items NavigationViewItem {
@@ -40,17 +45,23 @@
     margin: 3 4;
     font-size: 15px;
     transform-origin: left center;
+    /* Without it the entry jumped by 4 pixels at once, which read as a bounce when the pointer went from one to the
+       next. Ampify versions that cannot animate this element ignore it and keep the jump. */
+    transition: transform 160ms;
 }
 
-.sidebar-items NavigationViewItem:hover {
-    transform: translateX(4px) scale(1.02);
+@setting hover-grow {
+    .sidebar-items NavigationViewItem:hover {
+        transform: translateX(4px) scale(1.02);
+    }
 }
 
 /* ---- Playback bar, at the top, above the pages ------------------------------------------------------------------- */
 
+/* No band of its own: the sidebar's frost ran into it, which squared the panel's corner and left a dark notch above
+   it. The gradient shows through and the song's display floats like the panels. */
 .playbar {
-    backdrop: var(--glass);
-    padding: 6 12;
+    padding: 0 12;
 }
 
 .transport AppBarButton,
@@ -60,10 +71,12 @@
     transform-origin: center;
 }
 
-.transport AppBarButton:hover,
-.transport ToggleButton:hover,
-.transport Button:hover {
-    transform: scale(1.15);
+@setting hover-grow {
+    .transport AppBarButton:hover,
+    .transport ToggleButton:hover,
+    .transport Button:hover {
+        transform: scale(1.15);
+    }
 }
 
 /* The display of the song: a light, rounded card with a shadow. */
@@ -80,12 +93,13 @@
     transform-origin: center;
 }
 
-.lcd-artwork-image:hover {
-    transform: scale(1.08);
+@setting hover-grow {
+    .lcd-artwork-image:hover {
+        transform: scale(1.08);
+    }
 }
 
 .track-title {
-    font-size: 15px;
     font-weight: 600;
 }
 
@@ -94,8 +108,10 @@
     transform-origin: center;
 }
 
-.playbar-toggles ToggleButton:hover {
-    transform: scale(1.12);
+@setting hover-grow {
+    .playbar-toggles ToggleButton:hover {
+        transform: scale(1.12);
+    }
 }
 
 /* ---- Pages: a large glass card ------------------------------------------------------------------------------------- */
@@ -105,9 +121,15 @@
     box-shadow: 24px;
 }
 
-/* The search header, the same glass over the results that scroll under it. */
-.search-header {
+/* The search header and the Songs column titles, the same glass over the rows that scroll under them. */
+.search-header,
+.list-header {
     backdrop: acrylic($CardBackgroundFillColorDefaultBrush, 0.4);
+}
+
+/* An album's artist in the theme's accent, not Apple's blue. */
+.album-artist {
+    color: $AccentFillColorDefaultBrush;
 }
 
 /* The font only: a common size would overwrite the page titles. */
@@ -122,8 +144,13 @@
 }
 
 .card:hover {
-    transform: scale(1.04);
     box-shadow: 20px;
+}
+
+@setting hover-grow {
+    .card:hover {
+        transform: scale(1.04);
+    }
 }
 
 .artwork {
@@ -151,7 +178,14 @@
     padding: 10 20;
 }
 
-.album-play-button:hover,
-.album-shuffle-button:hover {
-    transform: scale(1.05);
+@setting hover-grow {
+    .album-play-button:hover,
+    .album-shuffle-button:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* Apple's full-screen player (Now Playing): its large artwork takes the panels' corners. */
+.fullscreen-artwork {
+    corner-radius: var(--panel-radius);
 }
