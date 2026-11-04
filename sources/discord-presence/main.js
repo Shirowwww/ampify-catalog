@@ -393,7 +393,7 @@ function rememberAnimation(motion, made) {
 
 // `uri` of a playlist line, against the playlist at `base` (Apple names the files of a variant relative to it).
 function against(uri, base) {
-  if (/^https:\/\//.test(uri)) return uri;
+  if (uri.startsWith("https://")) return uri;
   const page = base.replace(/[?#].*$/, "");
   return uri.startsWith("/") ? page.replace(/^(https:\/\/[^/]+).*$/, "$1") + uri : page.replace(/[^/]*$/, "") + uri;
 }

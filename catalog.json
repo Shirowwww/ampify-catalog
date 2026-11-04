@@ -112,7 +112,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/discord-presence-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/discord-presence-1.0.0.zip",
-      "sha256": "7663c48068177e0dc692970e86a7c50c189cfd9b7bf3e117cdc96b547c93f7ae",
+      "sha256": "b3d9b8e45914b3be1f5480fe7d633ae2d8ff7cc9785e8e2dfbf5377658789fdc",
       "permissions": [
         "player.read",
         "storage",
