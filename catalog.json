@@ -8,7 +8,7 @@
     {
       "id": "artwork",
       "name": "Artwork",
-      "version": "0.4.2",
+      "version": "1.0.0",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "The artwork of the current track fills the window, under dark glass panels that float.",
@@ -19,25 +19,66 @@
         "glass",
         "immersive"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-0.4.2.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-0.4.2.zip",
-      "sha256": "4cf922bcf250d4dcf7624abdac7d4aeee441fc52c450bcba6edb36808a4e7c21",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-1.0.0.zip",
+      "sha256": "80f3535fba33fcbebfb2c1b107c73fe253bbf9f54edfd4c82fff19726a25ebfd",
+      "permissions": []
+    },
+    {
+      "id": "cinema",
+      "name": "Cinema",
+      "version": "1.0.0",
+      "kind": "theme",
+      "author": "Shirowwww",
+      "description": "A dark room with one screen: deep black, the pages in a centred column with wide margins, and the playback bar as a floating capsule under it, tinted by the artwork of the song. The sidebar dims like house lights until the pointer comes over it.",
+      "kitApi": "1.0",
+      "tags": [
+        "dark",
+        "layout",
+        "artwork",
+        "minimal",
+        "black"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cinema-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cinema-1.0.0.zip",
+      "sha256": "834ebe5f2b5fcc3c095528da9225fb023d3441a2aadcf8b0cd5744c10e1d0070",
+      "permissions": []
+    },
+    {
+      "id": "console",
+      "name": "Console",
+      "version": "1.0.0",
+      "kind": "theme",
+      "author": "Shirowwww",
+      "description": "Studio hardware: graphite panels with fine edges and square corners, the playback bar as a rack unit at the bottom, and a wide display in its middle with an equalizer that follows the music. Three accents, as schemes: amber, VU green and ice.",
+      "kitApi": "1.0",
+      "tags": [
+        "dark",
+        "layout",
+        "hardware",
+        "equalizer",
+        "bottom-bar"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/console-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/console-1.0.0.zip",
+      "sha256": "fc7715a25b5d5597a31cebf1ba029a20da463705e00d63eb67fc7cdee158f91f",
       "permissions": []
     },
     {
       "id": "cover-ambience",
       "name": "Cover ambience",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "kind": "snippet",
       "author": "Shirowwww",
-      "description": "The song's display glows in the colours of its artwork and changes with each song, like Spicetify's Cover Ambience.",
+      "description": "The song glows in the colours of its artwork and changes with each song, on the display or along the whole playback bar, like Spicetify's Cover Ambience.",
       "kitApi": "1.0",
       "tags": [
         "artwork",
         "colors"
       ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cover-ambience-0.1.0.zip",
-      "sha256": "b16be07f14d75e3dad842bf4102292ca8ca49a687bf425e92cee15baca716747",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cover-ambience-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cover-ambience-1.0.0.zip",
+      "sha256": "b668fb693857424aa864906457b616e3c0eca17f680883fcc591ff4ab7cfa2e3",
       "permissions": []
     },
     {
@@ -54,37 +95,42 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/declutter-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/declutter-1.0.0.zip",
-      "sha256": "2120e1ec54c3a84fecec6f5d099938c03a22046b1a9514f507695e59fd428a07",
+      "sha256": "e55d6bc3a69f7e1a9134ae439a1e61f0af83d7134f141d17173336645a0a16f1",
       "permissions": []
     },
     {
       "id": "discord-presence",
       "name": "Discord presence",
-      "version": "0.2.2",
+      "version": "1.0.0",
       "kind": "extension",
       "author": "Shirowwww",
-      "description": "Your Discord status shows what you listen to: cover, artist, album, progress bar, links and buttons. Turn it on with Discord open. A cover Apple's catalog lacks (your own files) goes to a free host that deletes it within 3 days; this can be turned off.",
+      "description": "Your Discord status shows what you listen to: cover, artist, album, progress bar, links and buttons. Turn it on with Discord open. Covers and links come from Apple Music's catalog; a cover it lacks (your own files) goes to a free host that deletes it after a few months, which can be turned off.",
       "kitApi": "1.0",
       "tags": [
         "discord",
         "status"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/discord-presence-0.2.2.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/discord-presence-0.2.2.zip",
-      "sha256": "0cf4ca9c0ddaa6f4785d22c0f2822b7a343d93648a6158da0f0cec14861750fd",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/discord-presence-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/discord-presence-1.0.0.zip",
+      "sha256": "dc31ecbbfe88f1ffbd06d742a2153861ef2780f3291e4030d0bba3456bb8a189",
       "permissions": [
         "player.read",
         "storage",
         "ipc.discord",
+        "network:music.apple.com",
+        "network:amp-api.music.apple.com",
+        "network:mvod.itunes.apple.com",
         "network:itunes.apple.com",
-        "network:litterbox.catbox.moe",
-        "network:uguu.se"
+        "network:api.deezer.com",
+        "network:x0.at",
+        "network:uguu.se",
+        "network:litterbox.catbox.moe"
       ]
     },
     {
       "id": "display-equalizer",
       "name": "Display equalizer",
-      "version": "0.2.0",
+      "version": "1.0.0",
       "kind": "snippet",
       "author": "Shirowwww",
       "description": "Bars in the song's display that move with the music. Choose in the Ampify card where they go (either end of the display, across it, or on the artwork), how many and their colour.",
@@ -93,35 +139,35 @@
         "decoration",
         "gif"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-0.2.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-0.2.0.zip",
-      "sha256": "85096a6527f906e92030a3020a21d84206dd3d7d5c7cc7ccca939cc7e1abc238",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-1.0.0.zip",
+      "sha256": "f1ab07354e70c2039d49179517ad8f2892157495c6f440d94e4b8908c09c8faf",
       "permissions": []
     },
     {
       "id": "glass",
       "name": "Glass",
-      "version": "0.3.3",
+      "version": "1.0.0",
       "kind": "theme",
       "author": "Shirowwww",
-      "description": "A complete redesign: gradient and acrylic backgrounds, large rounded cards, larger text, buttons that grow on hover, shadows.",
+      "description": "Apple's Liquid Glass: the song's artwork fills the window, and the sidebar, the pages and a floating capsule for the playback bar are clear panes over it, tinted by the music, with a bright rim of light.",
       "kitApi": "1.0",
       "tags": [
         "glass",
-        "redesign",
+        "artwork",
+        "floating",
         "rounded",
-        "dark",
-        "light"
+        "dark"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-0.3.3.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-0.3.3.zip",
-      "sha256": "29694caf768d98c9c571748ac741888385d8d27c75e63875c3572a22c34feeb8",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-1.0.0.zip",
+      "sha256": "7436a510bbe7b060b6f4653bf6a86f9facc9f29b36d533ae169bf4924dc0db48",
       "permissions": []
     },
     {
       "id": "greenroom",
       "name": "Greenroom",
-      "version": "0.3.1",
+      "version": "1.0.0",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "A familiar layout from another music app: the playback bar at the bottom across the window, the track on the left, rounded dark panels and a green accent.",
@@ -132,15 +178,15 @@
         "green",
         "redesign"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-0.3.1.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-0.3.1.zip",
-      "sha256": "04ea7cae0297b5a9f6f393e0e1fdc3b2e939cef99b4abaea784b0bf301c9d9ee",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-1.0.0.zip",
+      "sha256": "c88324cd665490261ce697a1720751b5957fac472b9df1a7015e888842e7df8a",
       "permissions": []
     },
     {
       "id": "hello-extension",
       "name": "Hello, example for creators",
-      "version": "0.1.5",
+      "version": "1.0.0",
       "kind": "extension",
       "author": "Shirowwww",
       "description": "For people who make extensions: it shows nothing in Apple Music. The smallest extension, to read and copy: it writes to Ampify's log and counts the launches.",
@@ -149,9 +195,9 @@
         "example",
         "developer"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hello-extension-0.1.5.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hello-extension-0.1.5.zip",
-      "sha256": "ce180b12a546099b6b6bc51062031cbe5179e98868bae3da99f51e663bedbbcb",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hello-extension-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hello-extension-1.0.0.zip",
+      "sha256": "08b9a0825123f02c6751a7006ba0cccb86a31d332d8a43b24348bd9666cabff0",
       "permissions": [
         "storage"
       ]
@@ -159,7 +205,7 @@
     {
       "id": "high-contrast",
       "name": "High contrast",
-      "version": "1.1.4",
+      "version": "1.0.0",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "Black and white with one bright accent, and outlines instead of shades: every panel, card and menu has a clear edge, and what is under the pointer gets an accent outline. A dark scheme and a light one.",
@@ -171,15 +217,15 @@
         "light",
         "layout"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.1.4.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.1.4.zip",
-      "sha256": "d9c3d7a7e66ffea671162307ada5eaed1bb3fc309607b4a4ae018dab2ae86659",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.0.0.zip",
+      "sha256": "273c46b03cc99675b70589b9edaa5de09917c96d3a19df316ebb5cf3646a379a",
       "permissions": []
     },
     {
       "id": "keyboard-skip",
       "name": "Skip tracks from the keyboard",
-      "version": "0.1.5",
+      "version": "1.0.0",
       "kind": "extension",
       "author": "Shirowwww",
       "description": "Global shortcuts: Ctrl+Alt+Right for the next track, Ctrl+Alt+Left for the previous one.",
@@ -188,9 +234,9 @@
         "keyboard",
         "shortcuts"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/keyboard-skip-0.1.5.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/keyboard-skip-0.1.5.zip",
-      "sha256": "36ea44bbcc1a26be5e85ecc083b278feb333a5e8048c499fabb098e3ddc5d413",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/keyboard-skip-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/keyboard-skip-1.0.0.zip",
+      "sha256": "0939777962d5387406dbd8a248622f49f8fe8c79c5d122935731ca4224ba874c",
       "permissions": [
         "player.control",
         "ui.keyboard"
@@ -199,47 +245,51 @@
     {
       "id": "listening-stats",
       "name": "Listening stats",
-      "version": "0.1.1",
+      "version": "1.0.0",
       "kind": "app",
       "author": "Shirowwww",
-      "description": "Your top artists and songs of the last 7 days, the last 4 weeks or since the start, and your listening time, counted on this PC, like Spicetify's Stats.",
+      "description": "Your top artists and songs and your listening time, like Spicetify's Stats. By default from Apple Music's own play counts, all your devices included; the last 7 days, the last 4 weeks and since the start count what plays on this PC.",
       "kitApi": "1.0",
       "tags": [
         "stats",
         "history"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/listening-stats-0.1.1.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/listening-stats-0.1.1.zip",
-      "sha256": "2572405cf7c445641741ff311ef5361c6765c45a7bab86070139f6dab75c3bce",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/listening-stats-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/listening-stats-1.0.0.zip",
+      "sha256": "157604ed19932452c08467b80ae7985a73d049f41730cbbdf31435f6cb0e6b84",
       "permissions": [
         "player.read",
+        "library.read",
         "storage",
         "ui.page",
-        "ui.sidebar"
+        "ui.sidebar",
+        "network:itunes.apple.com",
+        "network:music.apple.com"
       ]
     },
     {
-      "id": "midnight",
-      "name": "Midnight",
-      "version": "0.4.2",
+      "id": "mirror",
+      "name": "Mirror",
+      "version": "1.0.0",
       "kind": "theme",
       "author": "Shirowwww",
-      "description": "An ink-blue night: the window fades from a deep blue sky to black behind two rounded panels edged with a faint moonlit line, and a pale moonlight blue marks what plays, what is chosen and the arrows of each shelf.",
+      "description": "Apple Music turned around: the sidebar on the right, the pages on the left, and the playback bar under them at the bottom left. Calm neutral greys, light text on dark, one sea-green accent. A setting puts the sidebar back on the left.",
       "kitApi": "1.0",
       "tags": [
         "dark",
-        "blue",
-        "layout"
+        "layout",
+        "calm",
+        "minimal"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/midnight-0.4.2.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/midnight-0.4.2.zip",
-      "sha256": "ea6120d08d97b41b6739b98af32d263cfeae25529d858fb982f684384abadb36",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/mirror-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/mirror-1.0.0.zip",
+      "sha256": "17b0f6755154eeeef215144b50a993fc1cd2e53c29d181d19d0a45403118d19e",
       "permissions": []
     },
     {
       "id": "new-releases",
       "name": "New releases",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "kind": "app",
       "author": "Shirowwww",
       "description": "Recent albums, EPs and singles from the artists you listen to, like Spicetify's New Releases. Checked once a day in Apple's public catalog; click a release to open it in Apple Music.",
@@ -248,9 +298,9 @@
         "releases",
         "discovery"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/new-releases-0.1.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/new-releases-0.1.0.zip",
-      "sha256": "4c37caa9876a3b929f4bf94a716309b3fa83f68282142860c315394c489743db",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/new-releases-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/new-releases-1.0.0.zip",
+      "sha256": "246372a48bdb2ba6e24e361dc777184fd03838cf7c6b3d936596cf1747509971",
       "permissions": [
         "player.read",
         "storage",
@@ -266,7 +316,7 @@
       "version": "1.0.0",
       "kind": "theme",
       "author": "Shirowwww",
-      "description": "One calm layout, seventeen colour schemes: Catppuccin, Dracula, Tokyo Night, Rose Pine, Nord, Gruvbox, Comfy, Mono. Each name gives the family, then the look (darkest, dark, dim, light, warm). One setting rounds every corner, from square to round.",
+      "description": "One calm layout, one colour scheme per family: Catppuccin, Tokyo Night, Rose Pine, Nord, Gruvbox, Dracula, Rose gold and Midnight. One setting rounds every corner, from square to round; the playback bar goes at the top or across the bottom.",
       "kitApi": "1.0",
       "tags": [
         "colors",
@@ -276,13 +326,13 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/palettes-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/palettes-1.0.0.zip",
-      "sha256": "fccf999bbd9042b67a1580f189547e136cb28995b3f7c2fcee821940df91372d",
+      "sha256": "7c58aeacbba84ae047a5cb7a175d4dba8cabb1ba35b69d12500353b25db78c9c",
       "permissions": []
     },
     {
       "id": "paper-light",
       "name": "Light paper",
-      "version": "1.1.3",
+      "version": "1.0.0",
       "kind": "theme",
       "author": "Shirowwww",
       "description": "An editorial look, as if printed: the sidebar and the pages are one sheet of warm paper parted by a hairline, titles in a serif, nearly square corners, ruled song lists and an ink-green accent. A dark scheme too.",
@@ -293,15 +343,15 @@
         "editorial",
         "layout"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.3.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.3.zip",
-      "sha256": "064087ae4922a26b4381b424726d341f36e2e5727ad0eab36a7c8589c181c6b6",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.0.0.zip",
+      "sha256": "04692c9d502f201df434b49b226bbfccd1651ef42aafc91982dab41046a960e8",
       "permissions": []
     },
     {
       "id": "react-panel",
       "name": "React panel, example for creators",
-      "version": "0.1.4",
+      "version": "1.0.0",
       "kind": "extension",
       "author": "Shirowwww",
       "description": "For people who make extensions: a panel written like React, without JSX, with a counter, a timer and settings (Ampify.React and Ampify.components). Nothing useful to listen with.",
@@ -310,37 +360,17 @@
         "example",
         "developer"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/react-panel-0.1.4.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/react-panel-0.1.4.zip",
-      "sha256": "97121499dce10f92964bcf0e35ca6a6238385b4de9b33dfb6f4f5e0f9ce3de85",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/react-panel-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/react-panel-1.0.0.zip",
+      "sha256": "fc18d7e06303b470d7a614b1f3850b1f4e9805fbe328e2da2470897ed1eceed4",
       "permissions": [
         "ui.panel"
       ]
     },
     {
-      "id": "rose-gold",
-      "name": "Rose gold",
-      "version": "1.2.2",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "Warm and polished: the window glows from copper to brown-black behind very round panels, the song's display is a pill and the play button a disc of rose gold metal. A dark scheme and a light one in cream and copper.",
-      "kitApi": "1.0",
-      "tags": [
-        "dark",
-        "light",
-        "warm",
-        "rounded",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.2.2.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/rose-gold-1.2.2.zip",
-      "sha256": "7ea068dcf93f99060084c3ebe21b93b6b3481529d74cf6833fa868feb037c39a",
-      "permissions": []
-    },
-    {
       "id": "scrobbler",
       "name": "Last.fm scrobbler",
-      "version": "0.2.2",
+      "version": "1.0.0",
       "kind": "extension",
       "author": "Shirowwww",
       "description": "Sends the tracks you listen to to Last.fm (scrobbling). Turn it on, allow Ampify on the Last.fm page that opens, and you are done. Plays that could not be sent wait in storage.",
@@ -349,9 +379,9 @@
         "lastfm",
         "scrobble"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/scrobbler-0.2.2.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/scrobbler-0.2.2.zip",
-      "sha256": "2d7a26e7f47cd59b352f372803a08f238abf3842d1fdaa968c9bd497831a803d",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/scrobbler-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/scrobbler-1.0.0.zip",
+      "sha256": "f9a54ce26fc676e8ab911e7744561cff9d1a7eee3693678a3b931a5950832f04",
       "permissions": [
         "player.read",
         "storage",
@@ -374,13 +404,13 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sidebar-icons-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sidebar-icons-1.0.0.zip",
-      "sha256": "0117f1bbc15a5b7a6a2181c8343bc8ffdb1f555755f1bc19614798ab0a7977d8",
+      "sha256": "75b5e7e1eb2aa606fc819c76ac50fc15c1a77de688f4a5dbca6b397b766bf67e",
       "permissions": []
     },
     {
       "id": "skip-list",
       "name": "Skip list",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "kind": "extension",
       "author": "Shirowwww",
       "description": "Never hear a song, album or artist again, like Spicetify's Trash Bin and Auto Skip. Add from the context menu or the playback bar, manage the list from the main menu, and optionally skip live versions, remixes and intros.",
@@ -389,9 +419,9 @@
         "skip",
         "filter"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/skip-list-0.1.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/skip-list-0.1.0.zip",
-      "sha256": "48aa74a989d336977dc7d76e420035ebf45688e29f821b4d5ca8eb018af54700",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/skip-list-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/skip-list-1.0.0.zip",
+      "sha256": "7965b517852852f6d58fcb7930e7fa047224d726d2f0e5a12c97f2eb67eddc78",
       "permissions": [
         "player.read",
         "player.control",
@@ -404,7 +434,7 @@
     {
       "id": "sleep-timer",
       "name": "Sleep timer",
-      "version": "0.1.6",
+      "version": "1.0.0",
       "kind": "extension",
       "author": "Shirowwww",
       "description": "Pauses the music after a delay set in minutes, counted from when Apple Music opens, and says so at the start.",
@@ -413,9 +443,9 @@
         "timer",
         "sleep"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sleep-timer-0.1.6.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sleep-timer-0.1.6.zip",
-      "sha256": "e2c78be3dde07655bbdebf0906bb861451b819a8a58c0d69b89d9ed78df0bffa",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sleep-timer-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sleep-timer-1.0.0.zip",
+      "sha256": "ba138ac9b3f6d76514d472391aeed93952beac1df9236549b4b47e53d3b7bfa1",
       "permissions": [
         "player.control",
         "notifications"
@@ -424,7 +454,7 @@
     {
       "id": "spinning-artwork",
       "name": "Spinning artwork",
-      "version": "0.2.1",
+      "version": "1.0.0",
       "kind": "snippet",
       "author": "Shirowwww",
       "description": "Example snippet: the artwork of the playback bar becomes a round record with grooves and a centre hole, and turns, with @keyframes and animation.",
@@ -433,28 +463,28 @@
         "animation",
         "artwork"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-0.2.1.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-0.2.1.zip",
-      "sha256": "84d5d6d3601e88966505486893f4964eaccf47e3a317e7b6751d873b4b445155",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.0.0.zip",
+      "sha256": "e182d125fe39a6abce948ca604cbe452b6070842413e63ec4dcb009a5f090723",
       "permissions": []
     },
     {
       "id": "square-corners",
       "name": "Square corners",
-      "version": "0.2.0",
+      "version": "1.0.0",
       "kind": "snippet",
       "author": "Shirowwww",
       "description": "Example snippet: removes the rounding of buttons and frames, on top of any theme.",
       "kitApi": "1.0",
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-0.2.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-0.2.0.zip",
-      "sha256": "5d127a7a491f76e06125338b2525dff0a32596cbbd71cc841f655b2d2bda2db2",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-1.0.0.zip",
+      "sha256": "7fa5aa888fa1e43387ef6d26b28d38e7a6f5abccbe7d036f352b00bfe46a9919",
       "permissions": []
     },
     {
       "id": "volume-percentage",
       "name": "Volume percentage",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "kind": "extension",
       "author": "Shirowwww",
       "description": "Shows Apple Music's volume as a percentage in the playback bar, next to the volume button, as Spicetify's Volume Percentage does.",
@@ -463,9 +493,9 @@
         "volume",
         "playbar"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/volume-percentage-0.1.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/volume-percentage-0.1.0.zip",
-      "sha256": "e4eb4f03a553e83b16a9ab88630cb6b0306006bbef8618aee883e43dee4cd122",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/volume-percentage-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/volume-percentage-1.0.0.zip",
+      "sha256": "afe8544e7d459ae5be2f312d8f499c989d1b72a1fa811e8927824cd04694e6af",
       "permissions": [
         "player.read",
         "ui.playbar"
