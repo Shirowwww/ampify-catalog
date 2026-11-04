@@ -454,7 +454,7 @@
     {
       "id": "spinning-artwork",
       "name": "Spinning artwork",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "kind": "snippet",
       "author": "Shirowwww",
       "description": "Example snippet: the artwork of the playback bar becomes a round record with grooves and a centre hole, and turns, with @keyframes and animation.",
@@ -463,9 +463,9 @@
         "animation",
         "artwork"
       ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.0.0.zip",
-      "sha256": "db793477f42a37acf373177762029e8fe1084ca54cc245b88b481ad5dbe1aeef",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.0.1.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.0.1.zip",
+      "sha256": "f59e739b6e7a411768b58173cf3ea087be40ad8c746f6e6e821fc5a4f4dbbd8d",
       "permissions": []
     },
     {
