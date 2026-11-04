@@ -21,7 +21,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-1.0.0.zip",
-      "sha256": "80f3535fba33fcbebfb2c1b107c73fe253bbf9f54edfd4c82fff19726a25ebfd",
+      "sha256": "db534260ea7dac2682978a1086e7bb554caaaf513ef32e7bc29b61557a08bf22",
       "permissions": []
     },
     {
@@ -41,7 +41,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cinema-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cinema-1.0.0.zip",
-      "sha256": "834ebe5f2b5fcc3c095528da9225fb023d3441a2aadcf8b0cd5744c10e1d0070",
+      "sha256": "ac7389b4925aba1f4517b74e250c763c5d1fc172c5519f4fa3ae99368e464fc8",
       "permissions": []
     },
     {
@@ -61,7 +61,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/console-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/console-1.0.0.zip",
-      "sha256": "fc7715a25b5d5597a31cebf1ba029a20da463705e00d63eb67fc7cdee158f91f",
+      "sha256": "cfba809d153a0b339fb6bf6f7cdfb63b2b0f8b527e6e7e56799f7048fdbf7a31",
       "permissions": []
     },
     {
@@ -78,7 +78,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cover-ambience-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cover-ambience-1.0.0.zip",
-      "sha256": "b668fb693857424aa864906457b616e3c0eca17f680883fcc591ff4ab7cfa2e3",
+      "sha256": "bab71c9f4b89da42247447ca9689da4b1102b093d7f2cd041beb9d4a7908bf54",
       "permissions": []
     },
     {
@@ -95,7 +95,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/declutter-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/declutter-1.0.0.zip",
-      "sha256": "e55d6bc3a69f7e1a9134ae439a1e61f0af83d7134f141d17173336645a0a16f1",
+      "sha256": "6c23baf1b1025ca09c0a3b209fc9af7ba7be6705da159bd1cbdfc3e0bf295e39",
       "permissions": []
     },
     {
@@ -112,7 +112,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/discord-presence-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/discord-presence-1.0.0.zip",
-      "sha256": "dc31ecbbfe88f1ffbd06d742a2153861ef2780f3291e4030d0bba3456bb8a189",
+      "sha256": "7663c48068177e0dc692970e86a7c50c189cfd9b7bf3e117cdc96b547c93f7ae",
       "permissions": [
         "player.read",
         "storage",
@@ -141,7 +141,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-1.0.0.zip",
-      "sha256": "f1ab07354e70c2039d49179517ad8f2892157495c6f440d94e4b8908c09c8faf",
+      "sha256": "8592d34900f5afa05d97983f4f31fcdcc9f2a0eca0c8a2d5e0519ed32f805402",
       "permissions": []
     },
     {
@@ -161,7 +161,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-1.0.0.zip",
-      "sha256": "7436a510bbe7b060b6f4653bf6a86f9facc9f29b36d533ae169bf4924dc0db48",
+      "sha256": "93b0a4445e741c795394f38cf46ee941fa0be5239d8e657a818d039c53b09cd9",
       "permissions": []
     },
     {
@@ -180,7 +180,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-1.0.0.zip",
-      "sha256": "c88324cd665490261ce697a1720751b5957fac472b9df1a7015e888842e7df8a",
+      "sha256": "4ee73b95006d52f5013d5fb056ad82ad86b5c7c083f7f83d357b4e9159c9224b",
       "permissions": []
     },
     {
@@ -197,7 +197,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hello-extension-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hello-extension-1.0.0.zip",
-      "sha256": "08b9a0825123f02c6751a7006ba0cccb86a31d332d8a43b24348bd9666cabff0",
+      "sha256": "e0616589d20e7a75a5487bf2008a5ed99bc3b8b2b9af4306bc1e80a76b7a02da",
       "permissions": [
         "storage"
       ]
@@ -219,7 +219,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.0.0.zip",
-      "sha256": "273c46b03cc99675b70589b9edaa5de09917c96d3a19df316ebb5cf3646a379a",
+      "sha256": "74f57ac20d6a3ab02574dee2b0fae21f084eb6cf40a6711c0c1deca69bf766fd",
       "permissions": []
     },
     {
@@ -236,7 +236,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/keyboard-skip-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/keyboard-skip-1.0.0.zip",
-      "sha256": "0939777962d5387406dbd8a248622f49f8fe8c79c5d122935731ca4224ba874c",
+      "sha256": "f3da8eff0f19a407b765a2795f6746b9bbf69b220e77b9c7455756336ce3e1a3",
       "permissions": [
         "player.control",
         "ui.keyboard"
@@ -256,7 +256,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/listening-stats-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/listening-stats-1.0.0.zip",
-      "sha256": "157604ed19932452c08467b80ae7985a73d049f41730cbbdf31435f6cb0e6b84",
+      "sha256": "78f256a1cafd55e42f59e363b45ca1cfc0481810da7fde570e7e00118720b5bf",
       "permissions": [
         "player.read",
         "library.read",
@@ -283,7 +283,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/mirror-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/mirror-1.0.0.zip",
-      "sha256": "17b0f6755154eeeef215144b50a993fc1cd2e53c29d181d19d0a45403118d19e",
+      "sha256": "e1625f57e96a840d9e7ed31711a53c1a10c4e9de26bb31c1ab24ac9cb57cd6b9",
       "permissions": []
     },
     {
@@ -300,7 +300,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/new-releases-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/new-releases-1.0.0.zip",
-      "sha256": "246372a48bdb2ba6e24e361dc777184fd03838cf7c6b3d936596cf1747509971",
+      "sha256": "1b4d1b905511baa234d0de223b0ee95377afc2907268a7fed0e18a9c4f0b41ed",
       "permissions": [
         "player.read",
         "storage",
@@ -326,7 +326,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/palettes-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/palettes-1.0.0.zip",
-      "sha256": "7c58aeacbba84ae047a5cb7a175d4dba8cabb1ba35b69d12500353b25db78c9c",
+      "sha256": "d90038132e2376e5eeaef1d660308dd72a13907ceafeb0094958d97ba04cae60",
       "permissions": []
     },
     {
@@ -345,7 +345,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.0.0.zip",
-      "sha256": "04692c9d502f201df434b49b226bbfccd1651ef42aafc91982dab41046a960e8",
+      "sha256": "c57bd30c6cdcd2e14944ebea325a6e95956b36b2178a7a7fe8a029b891c35972",
       "permissions": []
     },
     {
@@ -362,7 +362,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/react-panel-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/react-panel-1.0.0.zip",
-      "sha256": "fc18d7e06303b470d7a614b1f3850b1f4e9805fbe328e2da2470897ed1eceed4",
+      "sha256": "a21ffd666b45db7c9fa81b0173c42a71e9f94c2f3f51fe672ff2edbf24f07e08",
       "permissions": [
         "ui.panel"
       ]
@@ -381,7 +381,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/scrobbler-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/scrobbler-1.0.0.zip",
-      "sha256": "f9a54ce26fc676e8ab911e7744561cff9d1a7eee3693678a3b931a5950832f04",
+      "sha256": "30bc7ca3c542dbeb802ba193bb36c2eaa202122ba59011e5a34c54ed17a48d6f",
       "permissions": [
         "player.read",
         "storage",
@@ -404,7 +404,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sidebar-icons-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sidebar-icons-1.0.0.zip",
-      "sha256": "75b5e7e1eb2aa606fc819c76ac50fc15c1a77de688f4a5dbca6b397b766bf67e",
+      "sha256": "5d78e5f624bd51d886a34b0c78b2e0644bf9253af77c0f5047f1eaf3ce68180d",
       "permissions": []
     },
     {
@@ -421,7 +421,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/skip-list-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/skip-list-1.0.0.zip",
-      "sha256": "7965b517852852f6d58fcb7930e7fa047224d726d2f0e5a12c97f2eb67eddc78",
+      "sha256": "34c79174e0feb354bc2f8b3420282c842e6411aaf976c1fcf9e8dc83a43b9589",
       "permissions": [
         "player.read",
         "player.control",
@@ -445,7 +445,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sleep-timer-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sleep-timer-1.0.0.zip",
-      "sha256": "ba138ac9b3f6d76514d472391aeed93952beac1df9236549b4b47e53d3b7bfa1",
+      "sha256": "1c831203eea1ee6b793ffef11dca346d2f7ff42683455acc8b1842122c8e7e2c",
       "permissions": [
         "player.control",
         "notifications"
@@ -465,7 +465,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.0.0.zip",
-      "sha256": "e182d125fe39a6abce948ca604cbe452b6070842413e63ec4dcb009a5f090723",
+      "sha256": "db793477f42a37acf373177762029e8fe1084ca54cc245b88b481ad5dbe1aeef",
       "permissions": []
     },
     {
@@ -478,7 +478,7 @@
       "kitApi": "1.0",
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-1.0.0.zip",
-      "sha256": "7fa5aa888fa1e43387ef6d26b28d38e7a6f5abccbe7d036f352b00bfe46a9919",
+      "sha256": "9c7421ebcdaf687eee34c736f4ac4fa86893a79f37cb67954433ed2e922f6445",
       "permissions": []
     },
     {
@@ -495,7 +495,7 @@
       ],
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/volume-percentage-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/volume-percentage-1.0.0.zip",
-      "sha256": "afe8544e7d459ae5be2f312d8f499c989d1b72a1fa811e8927824cd04694e6af",
+      "sha256": "c930d5814815e3446f87ca86f08352ecb2c5648cbfa9ed34f92688465fb55fad",
       "permissions": [
         "player.read",
         "ui.playbar"
