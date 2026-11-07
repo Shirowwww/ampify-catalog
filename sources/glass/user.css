@@ -26,7 +26,15 @@
 }
 
 @import "ampify:floating-panels";
-@import "ampify:bottom-bar";
+
+/* The bar-position setting: a capsule over the bottom of the window (the default), or at the top as Apple has it. */
+@setting bar-position = Bottom {
+    @import "ampify:bottom-bar";
+}
+@setting bar-position = Centred {
+    @import "ampify:bottom-bar";
+    @import "ampify:centre-bar";
+}
 
 /* ---- The window: the artwork, behind everything --------------------------------------------------------------------- */
 
@@ -35,13 +43,14 @@
 }
 
 /* The moving-artwork setting: the artwork turns slowly behind the glass, enlarged so that its corners never show, as
-   behind Apple Music's full-screen player. The panes blur it; Windows' animation effects off, it stands still. */
+   behind Apple Music's full-screen player, and rests in pause. The panes blur it; Windows' animation effects off, it
+   stands still. */
 @setting moving-artwork {
     .window::before {
         content: artwork cover;
         transform-origin: center;
         opacity: 0.85;
-        animation: drift 90s linear infinite;
+        animation: drift 90s linear infinite playing;
     }
 }
 
@@ -125,30 +134,80 @@
     border-color: var(--rim);
     border-width: 1.5px;
     corner-radius: var(--bar-radius);
-    /* The bar starts at the page column: the capsule reaches back under the sidebar, to the same edge as its pane. */
-    margin: 0 var(--gap) var(--gap) calc(var(--gap) - 290);
     box-shadow: 32px;
 }
 
-@media (max-width: 1324px) {
+@setting bar-position = Bottom {
+    /* The bar starts at the page column: the capsule reaches back under the sidebar, to the same edge as its pane. */
     .playbar {
-        margin: 0 var(--gap) var(--gap) calc(var(--gap) - 48);
+        margin: 0 var(--gap) var(--gap) calc(var(--gap) - 290);
+    }
+
+    .playbar-controls {
+        grid-column: 0;
+        grid-column-span: 4;
+    }
+
+    .playbar-extras {
+        grid-column: 0;
+        grid-column-span: 4;
+    }
+
+    .playbar-toggles {
+        grid-column-span: 2;
+        margin: 0 20 0 0;
+    }
+}
+@setting bar-position = Centred {
+    /* The bar starts at the page column: the capsule reaches back under the sidebar, to the same edge as its pane. */
+    .playbar {
+        margin: 0 var(--gap) var(--gap) calc(var(--gap) - 290);
+    }
+
+    .playbar-controls {
+        grid-column: 0;
+        grid-column-span: 4;
+    }
+
+    .playbar-extras {
+        grid-column: 0;
+        grid-column-span: 4;
+    }
+
+    .playbar-toggles {
+        grid-column-span: 2;
+        margin: 0 20 0 0;
     }
 }
 
-.playbar-controls {
-    grid-column: 0;
-    grid-column-span: 4;
+@media (max-width: 1324px) {
+    @setting bar-position = Bottom {
+        .playbar {
+            margin: 0 var(--gap) var(--gap) calc(var(--gap) - 48);
+        }
+    }
+
+    @setting bar-position = Centred {
+        .playbar {
+            margin: 0 var(--gap) var(--gap) calc(var(--gap) - 48);
+        }
+    }
 }
 
-.playbar-extras {
-    grid-column: 0;
-    grid-column-span: 4;
-}
+/* At the top, the capsule sits in Apple's band above the pages, clear of the window's buttons on the right. */
+@setting bar-position = Top {
+    :root {
+        --content-top: calc(64 + var(--gap) * 2);
+    }
 
-.playbar-toggles {
-    grid-column-span: 2;
-    margin: 0 20 0 0;
+    /* Two gaps into the page column, where floating-panels starts the pages: the capsule lines up with them. */
+    .playbar {
+        margin: var(--gap) 150 0 calc(var(--gap) * 2);
+    }
+
+    .caption-buttons-cover {
+        visibility: collapsed;
+    }
 }
 
 
@@ -171,6 +230,11 @@
     corner-radius: 50;
     transform-origin: center;
     transition: transform 140ms;
+}
+
+/* The toggles are wider than high: a radius of 50 turned their hover into an oval. */
+.playbar-toggles ToggleButton {
+    corner-radius: calc(var(--setting-panel-radius) * 0.3);
 }
 
 @setting hover-grow {
@@ -206,8 +270,16 @@
 
 .volume-slider,
 .scrubber {
-    color: #F2FFFFFF;
     background: #33FFFFFF;
+}
+
+.volume-slider {
+    color: #F2FFFFFF;
+}
+
+/* In the accent, so that a chosen accent (Orange, the artwork's) reaches the line as it reaches the rest. */
+.scrubber {
+    color: $AccentFillColorDefaultBrush;
 }
 
 /* ---- Pages ---------------------------------------------------------------------------------------------------------- */
@@ -261,8 +333,10 @@
     transition: transform 120ms;
 }
 
+/* Play is wider than high: rounded, not a pill, which read as an oval beside the round buttons. */
 .album-play-button {
     padding: 10 22;
+    corner-radius: calc(var(--setting-panel-radius) * 0.4);
 }
 
 @setting hover-grow {
@@ -287,4 +361,48 @@
 .fullscreen-artwork {
     corner-radius: 24px;
     box-shadow: 40px;
+}
+
+/* ---- The light scheme -------------------------------------------------------------------------------------------- */
+
+/* White frosted glass, as Apple's light Liquid Glass: the cover's dark colour under the scheme's dark text read badly
+   whatever the song. The artwork still colours the panes through the blur; the frost setting moves the glass between
+   0.71 and 0.92, never so clear that the text sinks. */
+@media (prefers-color-scheme: light) {
+    .navigation {
+        backdrop: acrylic(#FFFFFFFF, 0.35);
+    }
+
+    .content,
+    .lyrics-panel,
+    .search-header,
+    .list-header,
+    .playbar {
+        backdrop: acrylic(#FFF4F8FF, calc(var(--setting-frost) * 0.3 + 0.65));
+    }
+
+    .volume-slider,
+    .scrubber {
+        background: #260E1424;
+    }
+
+    .volume-slider {
+        color: #E60E1424;
+    }
+
+    .play-button > Grid#Root {
+        background: linear-gradient(180deg, #F2FFFFFF, #B3FFFFFF);
+    }
+}
+
+@media (prefers-color-scheme: light) and (min-width: 1325px) {
+    .sidebar {
+        backdrop: acrylic(#FFF4F8FF, calc(var(--setting-frost) * 0.3 + 0.65));
+    }
+}
+
+@media (prefers-color-scheme: light) and (max-width: 1324px) {
+    .sidebar-column {
+        backdrop: acrylic(#FFF4F8FF, calc(var(--setting-frost) * 0.3 + 0.65));
+    }
 }
