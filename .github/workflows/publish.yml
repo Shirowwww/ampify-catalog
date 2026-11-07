@@ -6,6 +6,11 @@ on:
     branches: [main]
     paths:
       - "sources/**"
+  workflow_dispatch:
+    inputs:
+      base:
+        description: "Commit to compare the sources with"
+        required: true
 
 permissions:
   contents: read
@@ -41,7 +46,7 @@ jobs:
 
       - name: Pack the changed elements
         env:
-          BEFORE: ${{ github.event.before }}
+          BEFORE: ${{ github.event.before || inputs.base }}
           AFTER: ${{ github.sha }}
         run: |
           git diff --name-only "$BEFORE" "$AFTER" -- sources > "$RUNNER_TEMP/changed.txt"
