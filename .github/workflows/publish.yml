@@ -36,6 +36,7 @@ jobs:
           sparse-checkout: |
             tools
             schemas
+            facts
           persist-credentials: false
 
       - name: Pack the changed elements
