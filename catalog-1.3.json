@@ -142,6 +142,26 @@
           "sha256": "4216ba2e8870ee602df5bf29d839d9045b51da13a75f34734047d2c611465422",
           "permissions": [],
           "minAmpify": "1.3.0"
+        },
+        {
+          "id": "artwork",
+          "name": "Artwork",
+          "version": "1.2.4",
+          "kind": "theme",
+          "author": "Shirowwww",
+          "description": "The artwork of the current track fills the window, under dark glass panels that float.",
+          "kitApi": "1.0",
+          "tags": [
+            "artwork",
+            "dark",
+            "glass",
+            "immersive"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-1.2.4.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artwork-1.2.4.zip",
+          "sha256": "fa549d8cfab97e2f8fe84aa1925d1d85460e697e1675b83dd047ac906eaaa8cf",
+          "permissions": [],
+          "minAmpify": "1.3.0"
         }
       ]
     },
@@ -329,6 +349,27 @@
           "sha256": "6875b15eaa4302d6dc76802a2c6d5d172476cc48122081df56d63db4ad6de555",
           "permissions": [],
           "minAmpify": "1.3.0"
+        },
+        {
+          "id": "cinema",
+          "name": "Cinema",
+          "version": "1.3.1",
+          "kind": "theme",
+          "author": "Shirowwww",
+          "description": "A dark room with one screen: deep black, the pages in a centred column with wide margins, and the playback bar as a floating capsule under it, tinted by the artwork of the song. The sidebar dims like house lights until the pointer comes over it.",
+          "kitApi": "1.0",
+          "tags": [
+            "dark",
+            "layout",
+            "artwork",
+            "minimal",
+            "black"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cinema-1.3.1.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cinema-1.3.1.zip",
+          "sha256": "6c06d97877652b90c69e39f3693838313fe15acec5f775ca0af249e29d051692",
+          "permissions": [],
+          "minAmpify": "1.3.0"
         }
       ]
     },
@@ -387,6 +428,27 @@
           "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/console-1.1.0.jpg",
           "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/console-1.1.0.zip",
           "sha256": "95eba797e9a3dafd9cc70fa7a0a4ff8675fe4aa0f87e1ef5fa319b49eb70b43c",
+          "permissions": [],
+          "minAmpify": "1.3.0"
+        },
+        {
+          "id": "console",
+          "name": "Console",
+          "version": "1.1.1",
+          "kind": "theme",
+          "author": "Shirowwww",
+          "description": "Studio hardware: graphite panels with fine edges and square corners, the playback bar as a rack unit at the bottom, and a wide display in its middle with an equalizer that follows the music. Three accents, as schemes: amber, VU green and ice.",
+          "kitApi": "1.0",
+          "tags": [
+            "dark",
+            "layout",
+            "hardware",
+            "equalizer",
+            "bottom-bar"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/console-1.1.1.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/console-1.1.1.zip",
+          "sha256": "c21f497ca6ba4010ccef2f2ad7958c01c8c0ef8f898eebab11b50503b344212a",
           "permissions": [],
           "minAmpify": "1.3.0"
         }
@@ -690,6 +752,27 @@
           "sha256": "f7dc30fbde3fe267b964943fffd7775140540ec3dd125545fd9b9b4815471b55",
           "permissions": [],
           "minAmpify": "1.3.0"
+        },
+        {
+          "id": "glass",
+          "name": "Glass",
+          "version": "1.4.1",
+          "kind": "theme",
+          "author": "Shirowwww",
+          "description": "Apple's Liquid Glass: the song's artwork fills the window, and the sidebar, the pages and a floating capsule for the playback bar are clear panes over it, tinted by the music, with a bright rim of light.",
+          "kitApi": "1.0",
+          "tags": [
+            "glass",
+            "artwork",
+            "floating",
+            "rounded",
+            "dark"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-1.4.1.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/glass-1.4.1.zip",
+          "sha256": "7c883c2ead51e2fde3b629aa855dd677b4eb147ea845477cac25bc6fc74a9235",
+          "permissions": [],
+          "minAmpify": "1.3.0"
         }
       ]
     },
@@ -729,6 +812,26 @@
           "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-1.3.0.jpg",
           "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-1.3.0.zip",
           "sha256": "ea4e5ebc6bac5b8292cea24c09970fbcaa3688970c05ae3cf098776e0d734a56",
+          "permissions": [],
+          "minAmpify": "1.3.0"
+        },
+        {
+          "id": "greenroom",
+          "name": "Greenroom",
+          "version": "1.3.1",
+          "kind": "theme",
+          "author": "Shirowwww",
+          "description": "A familiar layout from another music app: the playback bar at the bottom across the window, the track on the left, rounded dark panels and a green accent.",
+          "kitApi": "1.0",
+          "tags": [
+            "layout",
+            "dark",
+            "green",
+            "redesign"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-1.3.1.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/greenroom-1.3.1.zip",
+          "sha256": "d12b93f240e16c546baf58a52dd3e2648c5018b8a4f02895de30013da634f08d",
           "permissions": [],
           "minAmpify": "1.3.0"
         }
@@ -1050,6 +1153,26 @@
           "sha256": "e8adb36b72269b46932de7170a9cc86c7ff3d39b44fdc4422869e1f20f81387b",
           "permissions": [],
           "minAmpify": "1.3.0"
+        },
+        {
+          "id": "mirror",
+          "name": "Mirror",
+          "version": "1.2.1",
+          "kind": "theme",
+          "author": "Shirowwww",
+          "description": "Apple Music turned around: the sidebar on the right, the pages on the left, and the playback bar under them at the bottom left. Calm neutral greys, light text on dark, one sea-green accent. A setting puts the sidebar back on the left.",
+          "kitApi": "1.0",
+          "tags": [
+            "dark",
+            "layout",
+            "calm",
+            "minimal"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/mirror-1.2.1.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/mirror-1.2.1.zip",
+          "sha256": "99b8e648c29e5f628fd888cfdcc31341a557269cecceb4a3d3fa6b447f143289",
+          "permissions": [],
+          "minAmpify": "1.3.0"
         }
       ]
     },
@@ -1142,6 +1265,26 @@
           "sha256": "bda73de01dee8fd94ebae7ce367f99765e42a930266fdfda1bf5609081fd9019",
           "permissions": [],
           "minAmpify": "1.3.0"
+        },
+        {
+          "id": "palettes",
+          "name": "Palettes",
+          "version": "1.3.1",
+          "kind": "theme",
+          "author": "Shirowwww",
+          "description": "One calm layout, one colour scheme per family: Catppuccin, Tokyo Night, Rose Pine, Nord, Gruvbox, Dracula, Rose gold and Midnight. One setting rounds every corner, from square to round; the playback bar goes at the top or across the bottom.",
+          "kitApi": "1.0",
+          "tags": [
+            "colors",
+            "dark",
+            "light",
+            "pastel"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/palettes-1.3.1.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/palettes-1.3.1.zip",
+          "sha256": "1d61e880620004e2d1a5079cd5b114e34c6064754cbaf1a7255e49e85e45a524",
+          "permissions": [],
+          "minAmpify": "1.3.0"
         }
       ]
     },
@@ -1181,6 +1324,26 @@
           "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.1.jpg",
           "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.1.zip",
           "sha256": "5dd60fd7c1dc9b8d81408efb37b11f9ebe8c1bc4cc9c3bfe84be07f46d63ab39",
+          "permissions": [],
+          "minAmpify": "1.3.0"
+        },
+        {
+          "id": "paper-light",
+          "name": "Light paper",
+          "version": "1.1.2",
+          "kind": "theme",
+          "author": "Shirowwww",
+          "description": "An editorial look, as if printed: the sidebar and the pages are one sheet of warm paper parted by a hairline, titles in a serif, nearly square corners, ruled song lists and an ink-green accent. A dark scheme too.",
+          "kitApi": "1.0",
+          "tags": [
+            "light",
+            "minimal",
+            "editorial",
+            "layout"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.2.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/paper-light-1.1.2.zip",
+          "sha256": "0e0d2df0df550f7feaf112f8c0984a379f3521d0dfbaf42590b0815978b382b5",
           "permissions": [],
           "minAmpify": "1.3.0"
         }
