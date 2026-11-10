@@ -15,7 +15,7 @@
     --radius-small: calc(var(--setting-panel-radius) * 0.5);
     --radius-play: calc(var(--setting-panel-radius) * 1.5);
     --bar-height: var(--setting-bar-height);
-    --bar-room: calc(var(--setting-bar-height) + var(--setting-gap));
+    --bar-room: calc(var(--setting-bar-height) + var(--setting-gap) * 2);
 }
 
 @import "ampify:floating-panels";
@@ -28,6 +28,20 @@
 @setting bar-position = Centred {
     @import "ampify:bottom-bar";
     @import "ampify:centre-bar";
+}
+
+/* At the default height (72, as in manifest.json) the top bar keeps Apple's own. A height moved off it is written 8
+   less than at the bottom, where the bar holds the song too, and the panels then start below the bar. */
+@setting bar-position = Top {
+    @setting bar-height != 72 {
+        :root {
+            --content-top: calc(var(--setting-bar-height) - 8);
+        }
+
+        .playbar {
+            height: calc(var(--setting-bar-height) - 8);
+        }
+    }
 }
 
 /* The bar-background setting: the bar takes the colours of the playing song's artwork, fading into the window. */
@@ -107,6 +121,7 @@
 
 .menu-item {
     corner-radius: var(--radius-small);
+    transition: background 120ms;
 }
 
 .menu-item:hover {
@@ -168,14 +183,6 @@
 .settings-card {
     background: $CardBackgroundFillColorDefaultBrush;
     corner-radius: var(--radius-box);
-}
-
-@setting hide-badges {
-    .explicit-badge,
-    .lossless-badge,
-    .digital-master-badge {
-        visibility: collapsed;
-    }
 }
 
 /* An album's or a playlist's Play: the theme's corners. Apple's pill read as an oval beside the round buttons. */

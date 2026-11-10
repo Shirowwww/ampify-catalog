@@ -15,7 +15,7 @@
     --hover: #2A2A2A;
     --band-background: #181818;
     --bar-height: var(--setting-bar-height);
-    --bar-room: calc(var(--setting-bar-height) + var(--setting-gap));
+    --bar-room: calc(var(--setting-bar-height) + var(--setting-gap) * 2);
 }
 
 @import "ampify:floating-panels";
@@ -40,6 +40,20 @@
     .lcd {
         background: transparent;
         border-width: 0;
+    }
+}
+
+/* At the default height (72, as in manifest.json) the top bar keeps Apple's own. A height moved off it is written 8
+   less than at the bottom, where the bar holds the song too, and the panels then start below the bar. */
+@setting bar-position = Top {
+    @setting bar-height != 72 {
+        :root {
+            --content-top: calc(var(--setting-bar-height) - 8);
+        }
+
+        .playbar {
+            height: calc(var(--setting-bar-height) - 8);
+        }
     }
 }
 
@@ -103,6 +117,10 @@
     background: #282828;
 }
 
+.menu-item {
+    transition: background 120ms;
+}
+
 .menu-item:hover {
     background: #3E3E3E;
 }
@@ -143,16 +161,6 @@
 
 .track-row:hover {
     background: var(--raised);
-}
-
-/* ---- Settings ----------------------------------------------------------------------------------------------------- */
-
-@setting hide-badges {
-    .explicit-badge,
-    .lossless-badge,
-    .digital-master-badge {
-        visibility: collapsed;
-    }
 }
 
 /* An album's or a playlist's Play: the theme's corners. Apple's pill read as an oval beside the round buttons. */
