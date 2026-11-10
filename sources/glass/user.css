@@ -11,9 +11,9 @@
     --font-body: "Segoe UI Variable Text";
     --window-background: #0B0D12;
     --panel-radius: var(--setting-panel-radius);
-    --gap: var(--setting-gap);
+    --gap: 14;
     --bar-height: 76;
-    --bar-room: calc(84 + var(--setting-gap));
+    --bar-room: 98;
     --bar-radius: 40;
     --lcd-radius: 24;
     --radius-small: calc(var(--setting-panel-radius) * 0.5);
@@ -26,14 +26,6 @@
 }
 
 @import "ampify:floating-panels";
-
-/* With the bar below, the strip under the window's buttons holds Ampify's search field (apple.topbar = search): a little
-   taller than the field and the buttons, so the field has room above it and the panes keep theirs below. */
-@setting bar-position != Top {
-    :root {
-        --caption-room: 48;
-    }
-}
 
 /* The bar-position setting: a capsule over the bottom of the window (the default), or at the top as Apple has it. */
 @setting bar-position = Bottom {
@@ -50,13 +42,15 @@
     background: artwork;
 }
 
-/* The moving-artwork setting: Apple Music's own full-screen background behind the glass, the song's artwork as a slow,
-   blurred, moving wash; the panes blur it further. An Ampify without content: immersion keeps the still artwork. */
+/* The moving-artwork setting: the artwork turns slowly behind the glass, enlarged so that its corners never show, as
+   behind Apple Music's full-screen player, and rests in pause. The panes blur it; Windows' animation effects off, it
+   stands still. */
 @setting moving-artwork {
     .window::before {
         content: artwork cover;
-        content: immersion;
+        transform-origin: center;
         opacity: 0.85;
+        animation: drift 90s linear infinite playing;
     }
 }
 
@@ -66,23 +60,19 @@
     backdrop: acrylic(#FF000000, 0.45);
 }
 
-@setting tint = Neutral {
-    :root {
-        --glass: acrylic(#FF14161C, var(--setting-frost));
+@keyframes drift {
+    from {
+        transform: scale(1.9) rotate(0deg);
+    }
+
+    to {
+        transform: scale(1.9) rotate(360deg);
     }
 }
 
-/* Liquid glass: a clearer pane than acrylic, what lies behind blurred less and its colours more vivid, with a sheen
-   along its top edge (Ampify's liquid-glass). It eases in when a pane appears. */
-@setting liquid {
+@setting tint = Neutral {
     :root {
-        --glass: liquid-glass(var(--art-3, #FF141822), var(--setting-frost));
-    }
-
-    @setting tint = Neutral {
-        :root {
-            --glass: liquid-glass(#FF14161C, var(--setting-frost));
-        }
+        --glass: acrylic(#FF14161C, var(--setting-frost));
     }
 }
 
@@ -113,11 +103,6 @@
     }
 }
 
-/* The pages stop just above the panel's rim: the tiles of the last row covered its bottom edge. */
-.content-frame {
-    margin: 0 0 3 0;
-}
-
 .search-header,
 .list-header {
     backdrop: var(--glass);
@@ -134,7 +119,6 @@
     corner-radius: 12;
     margin: 2 0;
     transform-origin: left center;
-    transition: transform 140ms;
 }
 
 @setting hover-grow {

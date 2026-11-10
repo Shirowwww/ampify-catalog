@@ -1,6 +1,7 @@
 /* Declutter: hides the buttons and banners most people never use, by their stable names (docs/themes/names.md), on
    top of any theme. Remove a line to bring that element back. */
 
+.info-bar,
 .reactions-button,
 .share-button,
 .add-description-button,
@@ -25,18 +26,10 @@
     }
 }
 
-/* Off unless chosen: the "E" of explicit songs, in the lists and beside the song playing. Apple shows and hides the
-   display's one with each song: it goes by opacity and gives its room back, so Apple's own switching keeps working
-   once the setting goes. */
+/* Off unless chosen: the "E" of explicit songs. */
 @setting explicit {
     .explicit-badge {
         visibility: collapsed;
-    }
-
-    .lcd-explicit-badge {
-        opacity: 0;
-        width: 0;
-        margin: 0;
     }
 }
 
@@ -49,96 +42,7 @@
     }
 }
 
-/* Off unless chosen: the sections of Home and New by kind (their titles are Apple's text, which changes with the
-   language and the person): the grid of large picks at the top of Home, and the banners made of one large item. The
-   shelves stay, so the page never goes empty. */
-@setting home-picks {
-    .section-grid {
-        visibility: collapsed;
-    }
-}
-
-@setting section-banners {
-    .section-single {
-        visibility: collapsed;
-    }
-}
-
-/* On unless turned off: Apple's banners at the top and the bottom of the window. They also say when Apple Music is
-   offline or cannot play, so they have a switch of their own. */
-@setting info-banners {
-    .info-bar {
-        visibility: collapsed;
-    }
-}
-
-/* On unless turned off. Apple Music shows and hides its logo itself, following what plays: an opacity leaves that
-   to it. */
-@setting apple-logo {
-    .apple-logo {
-        opacity: 0;
-    }
-}
-
-/* Off unless chosen: the account name at the bottom of the sidebar, out of screenshots. */
-@setting account-name {
-    .account-name {
-        visibility: collapsed;
-    }
-}
-
-/* Off unless chosen: the moving bars beside the song playing. Apple shows them on one row and hides them on the
-   others itself: an opacity leaves that to it, and no row shows them wrongly once the setting goes. */
-@setting playing-bars {
-    .now-playing-indicator {
-        opacity: 0;
-    }
-}
-
-/* Off unless chosen: the cover at the top of an album or a playlist, and its shadow. Apple starts and stops the moving
-   cover of some albums itself: it goes by opacity too. */
-@setting header-artwork {
-    .album-header .artwork,
-    .album-header .artwork-shadow {
-        visibility: collapsed;
-    }
-
-    .album-header .motion-artwork {
-        opacity: 0;
-    }
-}
-
-/* Off unless chosen: the coloured backdrop and the video Apple lays behind some pages (an artist, an album with a
-   moving cover). Apple fills it page by page: an opacity hides it without fighting that. */
-@setting page-backdrop {
-    .page-background {
-        opacity: 0;
-    }
-}
-
-/* The buttons, one switch each (the Hide buttons snippet until Ampify 1.3); turned off, the button comes back. */
-@setting lyrics-button {
-    .lyrics-button {
-        visibility: collapsed;
-    }
-}
-
-@setting queue-button {
-    .queue-button {
-        visibility: collapsed;
-    }
-}
-
-@setting volume-button {
-    .volume {
-        visibility: collapsed;
-    }
-}
-
-/* Only the button that starts a download: the mark of a song already downloaded and the ring of one on its way stay,
-   so what is on the PC still shows. */
-@setting download-button {
-    .download-button {
-        visibility: collapsed;
-    }
+/* Apple Music shows and hides its logo itself, following what plays: an opacity leaves that to it. */
+.apple-logo {
+    opacity: 0;
 }

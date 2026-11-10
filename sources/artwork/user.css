@@ -24,12 +24,9 @@
     --glass-light: acrylic(var(--tint), var(--setting-veil));
     --panel-radius: var(--setting-panel-radius);
     --gap: var(--setting-gap);
-    /* The bar at the top: 64 high, a gap from the window's top, then a gap before the pages, as every floating panel
-       (floating-panels' --content-top). A fixed 10 there kept "Space around the panels" off that one space. */
+    /* The bar: 64 high, 10 from the top, then a gap of 10 before the pages. */
+    --content-top: calc(var(--setting-gap) + 74);
     --band-background: #0FFFFFFF;
-    /* Apple's veil over the bar's artwork under the pointer is opaque: the zoom below ran behind it, unseen. At half
-       strength the picture reads through it, its icon as white as ever. */
-    --artwork-veil: 0.55;
 }
 
 @import "ampify:floating-panels";
@@ -48,63 +45,15 @@
     backdrop: var(--glass-light);
 }
 
+/* The bar stops before the window's buttons, so it needs no strip to keep them readable. */
 .playbar {
     backdrop: var(--glass);
     corner-radius: var(--panel-radius);
+    margin: var(--gap) 148 0 calc(var(--gap) * 2);
 }
 
-/* The bar-position setting. At the top (the default), the bar stops before the window's buttons, so it needs no strip
-   to keep them readable. */
-@setting bar-position = Top {
-    .playbar {
-        margin: var(--gap) 148 0 calc(var(--gap) * 2);
-    }
-
-    .caption-buttons-cover {
-        visibility: collapsed;
-    }
-}
-
-/* At the bottom, a third panel a gap above the window's edge, from the sidebar's edge to the window's right. */
-@setting bar-position = Bottom {
-    :root {
-        --bar-height: 72;
-        --bar-room: calc(72 + var(--setting-gap) * 2);
-    }
-
-    @import "ampify:bottom-bar";
-
-    .playbar {
-        margin: 0 var(--gap) var(--gap) calc(var(--gap) - 290);
-    }
-}
-@setting bar-position = Centred {
-    :root {
-        --bar-height: 72;
-        --bar-room: calc(72 + var(--setting-gap) * 2);
-    }
-
-    @import "ampify:bottom-bar";
-    @import "ampify:centre-bar";
-
-    .playbar {
-        margin: 0 var(--gap) var(--gap) calc(var(--gap) - 290);
-    }
-}
-
-/* Folded at 1324 pixels and less, the page column starts at the column of icons. */
-@media (max-width: 1324px) {
-    @setting bar-position = Bottom {
-        .playbar {
-            margin: 0 var(--gap) var(--gap) calc(var(--gap) - 48);
-        }
-    }
-
-    @setting bar-position = Centred {
-        .playbar {
-            margin: 0 var(--gap) var(--gap) calc(var(--gap) - 48);
-        }
-    }
+.caption-buttons-cover {
+    visibility: collapsed;
 }
 
 .playbar-toggles {
@@ -117,18 +66,13 @@
     corner-radius: 12px;
 }
 
+/* The artwork in the bar grows on hover. */
 .lcd-artwork-image {
+    transform-origin: center;
     corner-radius: 6px;
 }
 
-/* Under the pointer, the picture zooms in its own frame, smoothly: the display around the artwork cuts what passes
-   its edge, so the artwork cannot grow past its place in the bar. */
-.lcd-artwork-picture {
-    transform-origin: center;
-    transition: transform 160ms;
-}
-
-.lcd-artwork:hover .lcd-artwork-picture {
+.lcd-artwork-image:hover {
     transform: scale(1.1);
 }
 
@@ -137,24 +81,6 @@
 .volume-slider,
 .scrubber {
     color: var(--art-2, #FFFF5C8A);
-}
-
-/* The art-accent setting (Ember's Artwork accent, merged here): the toggles that are on, the Play button of an album
-   and the song playing take the artwork's vibrant colour too, like the progress line and the volume. */
-@setting art-accent {
-    .shuffle-button,
-    .repeat-button {
-        checked-color: var(--art-2, #FFFF5C8A);
-    }
-
-    .album-play-button > Grid#Root,
-    .album-play-button {
-        background: var(--art-2, #FFFF5C8A);
-    }
-
-    .list-item:playing TextBlock {
-        color: var(--art-2, #FFFF5C8A);
-    }
 }
 
 .app-name {
