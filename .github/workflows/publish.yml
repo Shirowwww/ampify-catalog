@@ -1,6 +1,7 @@
 name: Publish
 
-# After a merge that touches sources/: packs each changed element into packages/ and lists it in catalog.json.
+# After a merge that touches sources/: packs each changed element into packages/ and lists it in catalog-1.3.json,
+# and in catalog.json when Ampify 1.2.1 can install it.
 on:
   push:
     branches: [main]
@@ -55,10 +56,11 @@ jobs:
             --changed "$RUNNER_TEMP/changed.txt" \
             --message "$RUNNER_TEMP/message.txt"
           python3 ampify/tools/validate.py catalog catalog.json
+          python3 ampify/tools/validate.py catalog catalog-1.3.json
 
       - name: Commit and push
         run: |
-          git add catalog.json packages
+          git add catalog.json catalog-1.3.json packages
           if git diff --cached --quiet; then
             echo "Nothing to commit."
             exit 0

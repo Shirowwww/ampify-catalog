@@ -41,7 +41,9 @@ jobs:
           mkdir -p "$RUNNER_TEMP/out"
           # The checkout is the merge of the pull request: its first parent is the branch it targets.
           git diff --name-only HEAD^1 HEAD > "$RUNNER_TEMP/changed.txt"
-          git show HEAD^1:catalog.json > "$RUNNER_TEMP/base-catalog.json"
+          # The 1.3 catalog lists every version; before its first run, catalog.json does.
+          git show HEAD^1:catalog-1.3.json > "$RUNNER_TEMP/base-catalog.json" 2>/dev/null ||
+            git show HEAD^1:catalog.json > "$RUNNER_TEMP/base-catalog.json"
           echo "$PR_NUMBER" > "$RUNNER_TEMP/out/number.txt"
           status=0
           python3 .github/scripts/catalog_ci.py check \

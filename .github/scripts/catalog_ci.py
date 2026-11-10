@@ -14,10 +14,19 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import sys
+import zipfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 RAW = "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages"
+
+# Ampify 1.2.1 and older read catalog.json and reject the whole file over one entry they cannot read. Ampify 1.3.0
+# and later read catalog-1.3.json, which lists every version; catalog.json gets only the versions those older
+# releases take (no minAmpify, or one no later than LEGACY_AMPIFY).
+CATALOG = "catalog-1.3.json"
+LEGACY_CATALOG = "catalog.json"
+LEGACY_AMPIFY = "1.2.1"
 
 # A line this long is not hand-written: the code is minified or packed, and nobody can review it.
 MAX_LINE = 400
@@ -135,6 +144,15 @@ def author_errors(manifest, owners, pr_author):
             "use your GitHub login as `author`"]
 
 
+def preview_errors(folder, manifest):
+    """The Marketplace card needs a picture: the manifest names one and the file is there."""
+    preview = manifest.get("preview")
+    if not preview:
+        return ["no preview: add preview.jpg (or .png), 1280x720, taken in Apple Music with the lyrics blurred, and "
+                "\"preview\": \"preview.jpg\" in the manifest"]
+    return []  # a preview named but missing is refused earlier, by the manifest check
+
+
 def check_element(pack, identifier, published, owners=None, pr_author=""):
     """Returns (manifest or None, errors) for sources/<identifier>."""
     folder = os.path.join(ROOT, "sources", identifier)
@@ -145,6 +163,7 @@ def check_element(pack, identifier, published, owners=None, pr_author=""):
     except pack.PackError as error:
         return None, [line.split(": ", 1)[-1] for line in str(error).splitlines()]
     errors = version_errors(manifest, published) + permission_errors(folder, manifest) + readability_errors(folder)
+    errors += preview_errors(folder, manifest)
     errors += author_errors(manifest, owners or {}, pr_author)
     return manifest, errors
 
@@ -173,7 +192,9 @@ def check(args):
     if os.path.isfile(args.base_catalog):
         with open(args.base_catalog, encoding="utf-8") as handle:
             entries = json.load(handle)["extensions"]
-        published = {item["id"]: item["version"] for item in entries}
+        # The highest version listed, the entry's or one of its newer list's.
+        published = {item["id"]: max([item["version"]] + [later["version"] for later in item.get("newer", [])],
+                                     key=version_key) for item in entries}
         owners = {item["id"]: item.get("author", "") for item in entries}
     # The catalog's owner may change several elements at once and keeps the elements without an author check.
     pr_author = "" if (args.pr_author or "").lower() == (args.owner or "").lower() else (args.pr_author or "")
@@ -182,7 +203,7 @@ def check(args):
     if pr_author and len(ids) > 1:
         failed = True
         lines += [f"- This pull request changes {len(ids)} elements. Send one element per pull request."]
-    protected = [path for path in others if path == "catalog.json" or path.startswith("packages/")]
+    protected = [path for path in others if path in (CATALOG, LEGACY_CATALOG) or path.startswith("packages/")]
     if protected:
         failed = True
         lines += ["- This pull request changes files that the bot writes after the merge "
@@ -194,7 +215,7 @@ def check(args):
     if not ids:
         lines.append("- No element under `sources/` changed.")
     lines += ["", "Passing these checks does not replace the review: a maintainer reads the code before the merge.",
-              "After the merge, a bot packs the element into `packages/` and lists it in `catalog.json`."]
+              "After the merge, a bot packs the element into `packages/` and lists it in the catalog."]
     with open(args.summary, "w", encoding="utf-8", newline="\n") as handle:
         handle.write("\n".join(lines) + "\n")
     print("\n".join(lines))
@@ -206,8 +227,16 @@ def sha256_of(path):
         return hashlib.sha256(handle.read()).hexdigest()
 
 
-def publish_one(pack, identifier, catalog):
-    """Packs sources/<identifier> unless this version is already there. Returns 'id version' when it packed."""
+def archive_files(path):
+    """The names and bytes an archive holds, whatever compressed them."""
+    with zipfile.ZipFile(path) as archive:
+        return [(item.filename, archive.read(item)) for item in archive.infolist()]
+
+
+def publish_one(pack, identifier, catalog, legacy=None):
+    """Packs sources/<identifier> unless this version is already there. Returns 'id version' when it packed. A version
+    whose manifest names a `minAmpify` goes to its entry's newer list, so the older releases of Ampify keep theirs.
+    With `legacy` (catalog.json), the version is listed there too when the older releases can install it."""
     folder = os.path.join(ROOT, "sources", identifier)
     manifest = pack.check_folder(folder)
     name = f"{identifier}-{manifest['version']}.zip"
@@ -215,7 +244,9 @@ def publish_one(pack, identifier, catalog):
     if os.path.exists(archive):
         scratch = archive + ".check"
         try:
-            same = pack.build_archive(folder, scratch) == sha256_of(archive)
+            # The same files: an archive packed elsewhere (another zlib) has other bytes but holds the same element.
+            same = pack.build_archive(folder, scratch) == sha256_of(archive) or \
+                archive_files(scratch) == archive_files(archive)
         finally:
             if os.path.exists(scratch):
                 os.remove(scratch)
@@ -223,22 +254,36 @@ def publish_one(pack, identifier, catalog):
             raise pack.PackError(f"{name} is already published with other content: bump the version in {identifier}")
         print(f"{name}: already published, nothing to do")
         return None
-    pack.pack(folder, archive, catalog, f"{RAW}/{name}")
+    url = f"{RAW}/{name}"
+    min_ampify = manifest.get("minAmpify")
+    pack.pack(folder, archive, catalog, url, min_ampify)
+    if legacy and takes_legacy(min_ampify):
+        preview = pack.preview_target(manifest, archive)
+        entry = pack.catalog_entry(manifest, url, sha256_of(archive), preview and pack.preview_address(preview, url))
+        pack.update_catalog(legacy, entry, min_ampify)
     print(f"{name}: packed")
     return f"{identifier} {manifest['version']}"
+
+
+def takes_legacy(min_ampify):
+    """True when Ampify LEGACY_AMPIFY and older can install a version that asks for this release of Ampify."""
+    return not min_ampify or version_key(min_ampify) <= version_key(LEGACY_AMPIFY)
 
 
 def publish(args):
     pack = import_tools(args.ampify)
     ids, _others = split_changes(read_lines(args.changed))
-    catalog = os.path.join(ROOT, "catalog.json")
+    catalog = os.path.join(ROOT, CATALOG)
+    legacy = os.path.join(ROOT, LEGACY_CATALOG)
+    if not os.path.isfile(catalog):
+        shutil.copyfile(legacy, catalog)  # the first run: the 1.3 catalog starts from what is published
     packed = []
     for identifier in ids:
         if not os.path.isdir(os.path.join(ROOT, "sources", identifier)):
             print(f"{identifier}: removed from sources/, its catalog entry is left for a maintainer")
             continue
         try:
-            done = publish_one(pack, identifier, catalog)
+            done = publish_one(pack, identifier, catalog, legacy)
         except (pack.PackError, OSError, KeyError, ValueError) as error:
             print(f"{identifier}: {error}", file=sys.stderr)
             return 1
