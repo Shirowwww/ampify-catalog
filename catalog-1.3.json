@@ -549,6 +549,24 @@
           "sha256": "9a089433d0abf3df907a272538660c69b356a2250eb3590549f02364c810533d",
           "permissions": [],
           "minAmpify": "1.3.0"
+        },
+        {
+          "id": "declutter",
+          "name": "Declutter",
+          "version": "1.3.1",
+          "kind": "snippet",
+          "author": "Shirowwww",
+          "description": "Hides what most people never use (reactions, share, AirPlay, info banners) and, as settings, the search bar of albums and playlists, the quality badges, the explicit mark, Apple's suggestions and, one by one, the lyrics, Up Next, volume and download buttons.",
+          "kitApi": "1.0",
+          "tags": [
+            "minimal",
+            "declutter"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/declutter-1.3.1.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/declutter-1.3.1.zip",
+          "sha256": "fb6cf8e81219e170c3767e492b1a24f38f3eb19a6133599ff6efe5c193f0baa7",
+          "permissions": [],
+          "minAmpify": "1.3.2"
         }
       ]
     },
@@ -1784,6 +1802,27 @@
           "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/volume-percentage-1.0.1.jpg",
           "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/volume-percentage-1.0.1.zip",
           "sha256": "89ccbe38fcdcb7eaac6c4e38936515dbdb44f77cb12b6f8f4068d6b08f8b806b",
+          "permissions": [
+            "player.read",
+            "ui.playbar"
+          ],
+          "minAmpify": "1.3.0"
+        },
+        {
+          "id": "volume-percentage",
+          "name": "Volume percentage",
+          "version": "1.0.2",
+          "kind": "extension",
+          "author": "Shirowwww",
+          "description": "Shows Apple Music's volume as a percentage in the playback bar, next to the volume button, as Spicetify's Volume Percentage does.",
+          "kitApi": "1.0",
+          "tags": [
+            "volume",
+            "playbar"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/volume-percentage-1.0.2.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/volume-percentage-1.0.2.zip",
+          "sha256": "513cff1575273bfdac12aa8dadff66c3e6e2487425816c6c4a88a7b37248cb13",
           "permissions": [
             "player.read",
             "ui.playbar"
