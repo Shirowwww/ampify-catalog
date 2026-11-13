@@ -321,7 +321,28 @@
         "network:amp-api.music.apple.com",
         "network:music.apple.com"
       ],
-      "minAmpify": "1.4.0"
+      "minAmpify": "1.4.0",
+      "newer": [
+        {
+          "id": "automix",
+          "name": "AutoMix",
+          "version": "1.0.1",
+          "kind": "extension",
+          "author": "Shirowwww",
+          "description": "Mixes each song into the next like a DJ: Apple's analysis of both songs picks the bar where the next one comes in, and Ampify keeps the two in step to the millisecond while their volumes cross.",
+          "kitApi": "1.0",
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/automix-1.0.1.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/automix-1.0.1.zip",
+          "sha256": "af0994da435c364bb65baafe0af616e3135116615f6184d9e0ab4a2f03a4e9b8",
+          "permissions": [
+            "audio.mix",
+            "storage",
+            "network:amp-api.music.apple.com",
+            "network:music.apple.com"
+          ],
+          "minAmpify": "1.4.0"
+        }
+      ]
     },
     {
       "id": "bookmarks",
