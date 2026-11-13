@@ -54,3 +54,11 @@ goes to `catalog-1.3.json` only; any other also goes to `catalog.json`, so Ampif
 catalog over one entry it cannot read, keeps working. The Marketplace lists the element from then on. An archive never
 changes: a new version gets a new archive, and the old one stays, so a pinned install keeps working. Removing an element
 is done by a maintainer.
+
+## Ampify's own elements
+
+Most of what Ampify offers comes from here, its own extensions included (Now Playing, Time on hover, the Song panel,
+AutoMix). The app itself only carries the Marketplace, the playback guard and the built-in Atmos leveler. The sources
+of Ampify's own elements live in the Ampify repository (`extensions/`, `examples/`, `themes/`); a maintainer copies the
+folder to `sources/<id>/` with a higher `version`, in LF line endings, and pushes to `main`: the bot does the rest.
+An element Ampify retired leaves the catalog with its sources and archives; Ampify moves its users to what replaced it.

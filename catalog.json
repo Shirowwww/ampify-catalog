@@ -44,23 +44,6 @@
       "permissions": []
     },
     {
-      "id": "animated-artwork",
-      "name": "Animated artwork",
-      "version": "1.0.0",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "The window's background is the artwork of the song, in two layers that turn slowly in opposite directions. It stops in pause and while Apple Music is hidden.",
-      "kitApi": "1.0",
-      "tags": [
-        "animation",
-        "artwork",
-        "background"
-      ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/animated-artwork-1.0.0.zip",
-      "sha256": "86703513a7be8f64bbf241b57984eb44bf02efc6c55e86b4f101db3ec1bfb0bd",
-      "permissions": []
-    },
-    {
       "id": "artwork",
       "name": "Artwork",
       "version": "1.0.2",
@@ -123,39 +106,6 @@
       ]
     },
     {
-      "id": "bottom-playbar",
-      "name": "Bottom playback bar",
-      "version": "1.1.0",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "Moves the playback bar to the bottom of the window, across its whole width, as in Spotify: the song on the left, the controls in the middle, volume, lyrics and queue on the right. Works without a theme.",
-      "kitApi": "1.0",
-      "tags": [
-        "layout",
-        "playback-bar"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/bottom-playbar-1.1.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/bottom-playbar-1.1.0.zip",
-      "sha256": "c318f6c09388ca05694b8abf815223c69a87f7705fc96afb00f960acd0400fef",
-      "permissions": []
-    },
-    {
-      "id": "centred-lyrics",
-      "name": "Centred lyrics",
-      "version": "1.0.1",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "The lyrics sit in the middle of their panel, line by line, like a centred lyrics theme on Spicetify.",
-      "kitApi": "1.0",
-      "tags": [
-        "lyrics",
-        "layout"
-      ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/centred-lyrics-1.0.1.zip",
-      "sha256": "ecefa15aa89c244d3571b38bf4bf512a72750417c0d3dade18323c5afaa6e175",
-      "permissions": []
-    },
-    {
       "id": "cinema",
       "name": "Cinema",
       "version": "1.1.0",
@@ -176,23 +126,6 @@
       "permissions": []
     },
     {
-      "id": "compact-sidebar",
-      "name": "Compact sidebar",
-      "version": "1.0.0",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "Tighter rows in the sidebar, so more of your playlists fit on screen, on top of any theme, like Comfy's compact sidebar on Spicetify.",
-      "kitApi": "1.0",
-      "tags": [
-        "sidebar",
-        "compact"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/compact-sidebar-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/compact-sidebar-1.0.0.zip",
-      "sha256": "54add0d8bc04513b7a53200ff9cdb6b588de14863b157f68bf0020339d07d0b3",
-      "permissions": []
-    },
-    {
       "id": "console",
       "name": "Console",
       "version": "1.0.1",
@@ -210,23 +143,6 @@
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/console-1.0.1.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/console-1.0.1.zip",
       "sha256": "296399f87ab03cc16e0b92046bd203d818f0664f085251f812baac40adc8c9f8",
-      "permissions": []
-    },
-    {
-      "id": "cover-ambience",
-      "name": "Cover ambience",
-      "version": "1.0.0",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "The song glows in the colours of its artwork and changes with each song, on the display or along the whole playback bar, like Spicetify's Cover Ambience.",
-      "kitApi": "1.0",
-      "tags": [
-        "artwork",
-        "colors"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cover-ambience-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/cover-ambience-1.0.0.zip",
-      "sha256": "bab71c9f4b89da42247447ca9689da4b1102b093d7f2cd041beb9d4a7908bf54",
       "permissions": []
     },
     {
@@ -290,25 +206,6 @@
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-1.0.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/display-equalizer-1.0.0.zip",
       "sha256": "8592d34900f5afa05d97983f4f31fcdcc9f2a0eca0c8a2d5e0519ed32f805402",
-      "permissions": []
-    },
-    {
-      "id": "ember",
-      "name": "Ember",
-      "version": "1.2.1",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "Two glass panels over the colours of the song playing, the library and the pages, with the playback bar along the bottom and an amber accent.",
-      "kitApi": "1.0",
-      "tags": [
-        "layout",
-        "dark",
-        "artwork",
-        "glass"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/ember-1.2.1.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/ember-1.2.1.zip",
-      "sha256": "a62829cfea08eb50fd9f2dfb56e3ffd37393acaabbd272ecb3ffffd6f5d0cb82",
       "permissions": []
     },
     {
@@ -390,57 +287,6 @@
       ]
     },
     {
-      "id": "hide-explicit",
-      "name": "Hide explicit badge",
-      "version": "1.0.1",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "Hides the small E badge that marks explicit songs, on top of any theme.",
-      "kitApi": "1.0",
-      "tags": [
-        "minimal"
-      ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hide-explicit-1.0.1.zip",
-      "sha256": "fa10ca83beeb2bce7df4e4e96ffedabc0fd88a756eca3dd971441cc99100321c",
-      "permissions": []
-    },
-    {
-      "id": "high-contrast",
-      "name": "High contrast",
-      "version": "1.0.0",
-      "kind": "theme",
-      "author": "Shirowwww",
-      "description": "Black and white with one bright accent, and outlines instead of shades: every panel, card and menu has a clear edge, and what is under the pointer gets an accent outline. A dark scheme and a light one.",
-      "kitApi": "1.0",
-      "tags": [
-        "accessibility",
-        "contrast",
-        "dark",
-        "light",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/high-contrast-1.0.0.zip",
-      "sha256": "74f57ac20d6a3ab02574dee2b0fae21f084eb6cf40a6711c0c1deca69bf766fd",
-      "permissions": []
-    },
-    {
-      "id": "hover-row-actions",
-      "name": "Actions on hover",
-      "version": "1.0.1",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "The favourite, add, download and reaction buttons of a song appear only when the pointer is over its row, which keeps the lists calm.",
-      "kitApi": "1.0",
-      "tags": [
-        "layout",
-        "minimal"
-      ],
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hover-row-actions-1.0.1.zip",
-      "sha256": "c9826acb67a3769ba62a8f0d4f0c382898def281b6f47fa807c0afbc83033449",
-      "permissions": []
-    },
-    {
       "id": "keyboard-skip",
       "name": "Skip tracks from the keyboard",
       "version": "1.0.0",
@@ -500,23 +346,6 @@
         "network:itunes.apple.com",
         "network:music.apple.com"
       ]
-    },
-    {
-      "id": "lyrics-spotlight",
-      "name": "Lyrics spotlight",
-      "version": "1.0.0",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "The line being sung stands on a soft tile of the song's colour in Apple's lyrics pane, and follows the song line by line, on top of any theme.",
-      "kitApi": "1.0",
-      "tags": [
-        "lyrics",
-        "karaoke"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/lyrics-spotlight-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/lyrics-spotlight-1.0.0.zip",
-      "sha256": "134905eee0f58c24c03feb54d3df5bd4c2c4da24c212f363c714bcca232bcda8",
-      "permissions": []
     },
     {
       "id": "mirror",
@@ -600,40 +429,6 @@
       "permissions": []
     },
     {
-      "id": "progress-mascot",
-      "name": "Progress mascot",
-      "version": "1.0.0",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "A little animated figure rides the progress bar at the song's position, like Spicetify's Nyan Cat bar: a comet, a bobbing note or a beating heart.",
-      "kitApi": "1.0",
-      "tags": [
-        "progress",
-        "fun"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/progress-mascot-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/progress-mascot-1.0.0.zip",
-      "sha256": "bc2b02ee7dfdb97f6595a6d6b7e5dcd170ff555082c14c3f7c28cf5875e97b0d",
-      "permissions": []
-    },
-    {
-      "id": "progress-thickness",
-      "name": "Progress line thickness",
-      "version": "1.0.0",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "A thinner or thicker progress line in the display, with round ends, on top of any theme, like Spicetify's thin and thick bar snippets.",
-      "kitApi": "1.0",
-      "tags": [
-        "progress",
-        "playback-bar"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/progress-thickness-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/progress-thickness-1.0.0.zip",
-      "sha256": "c9639edbc9a06d18e706bb738beb7909fb80cfd8ecec90a50ec7a2471c726f90",
-      "permissions": []
-    },
-    {
       "id": "react-panel",
       "name": "React panel, example for creators",
       "version": "1.0.0",
@@ -691,23 +486,6 @@
         "network:ws.audioscrobbler.com",
         "network:www.last.fm"
       ]
-    },
-    {
-      "id": "sidebar-icons",
-      "name": "Sidebar icons",
-      "version": "1.0.0",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "Gives every pinned item and playlist of the sidebar the same shape, round or square with softened corners, on top of any theme or none.",
-      "kitApi": "1.0",
-      "tags": [
-        "sidebar",
-        "layout"
-      ],
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sidebar-icons-1.0.0.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sidebar-icons-1.0.0.zip",
-      "sha256": "5d78e5f624bd51d886a34b0c78b2e0644bf9253af77c0f5047f1eaf3ce68180d",
-      "permissions": []
     },
     {
       "id": "skip-list",
@@ -768,19 +546,6 @@
       "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.1.0.jpg",
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.1.0.zip",
       "sha256": "7f17fe09e9b70126befa114b60e330c70fc730b737a6e81ac39d40819d39549b",
-      "permissions": []
-    },
-    {
-      "id": "square-corners",
-      "name": "Square corners",
-      "version": "1.0.1",
-      "kind": "snippet",
-      "author": "Shirowwww",
-      "description": "Example snippet: removes the rounding of buttons and frames, on top of any theme.",
-      "kitApi": "1.0",
-      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-1.0.1.jpg",
-      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/square-corners-1.0.1.zip",
-      "sha256": "7d361c03dc10c68abfaed98d059cba2f520e92262d59997de82a3a62c2ee7357",
       "permissions": []
     },
     {
