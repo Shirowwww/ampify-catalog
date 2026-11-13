@@ -146,6 +146,24 @@
       ]
     },
     {
+      "id": "artist-backdrop",
+      "name": "Artist backdrop",
+      "version": "1.0.0",
+      "kind": "snippet",
+      "author": "Shirowwww",
+      "description": "Blurs and darkens the large picture or video behind an artist's page, so the name, the buttons and the shelves on top of it read clearly. Soft, medium or strong.",
+      "kitApi": "1.0",
+      "tags": [
+        "artwork",
+        "layout"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artist-backdrop-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artist-backdrop-1.0.0.zip",
+      "sha256": "6e1be8a2b75390436e7463ffb0c4c64ded04bf12a06bfc98227cec487b83d343",
+      "permissions": [],
+      "minAmpify": "1.4.0"
+    },
+    {
       "id": "artwork",
       "name": "Artwork",
       "version": "1.0.2",
