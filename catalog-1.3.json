@@ -161,7 +161,27 @@
       "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artist-backdrop-1.0.0.zip",
       "sha256": "6e1be8a2b75390436e7463ffb0c4c64ded04bf12a06bfc98227cec487b83d343",
       "permissions": [],
-      "minAmpify": "1.4.0"
+      "minAmpify": "1.4.0",
+      "newer": [
+        {
+          "id": "artist-backdrop",
+          "name": "Artist backdrop",
+          "version": "1.1.0",
+          "kind": "snippet",
+          "author": "Shirowwww",
+          "description": "Blurs and darkens the large picture behind an artist's page so the text on it reads clearly, with a blur of its own for ordinary pages (a photo and a round portrait) and for featured ones made full screen (Eminem, The Weeknd).",
+          "kitApi": "1.0",
+          "tags": [
+            "artwork",
+            "layout"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artist-backdrop-1.1.0.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/artist-backdrop-1.1.0.zip",
+          "sha256": "df76ed572c927d8d0af8d9920eb2a48a91a087273778829430f8cdd41762618d",
+          "permissions": [],
+          "minAmpify": "1.4.0"
+        }
+      ]
     },
     {
       "id": "artwork",
