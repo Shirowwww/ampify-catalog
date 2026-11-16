@@ -21,12 +21,12 @@ import zipfile
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 RAW = "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages"
 
-# Ampify 1.2.1 and older read catalog.json and reject the whole file over one entry they cannot read. Ampify 1.3.0
-# and later read catalog-1.3.json, which lists every version; catalog.json gets only the versions those older
-# releases take (no minAmpify, or one no later than LEGACY_AMPIFY).
-CATALOG = "catalog-1.3.json"
-LEGACY_CATALOG = "catalog.json"
-LEGACY_AMPIFY = "1.2.1"
+# Ampify 1.5.0 and later read catalog-1.5.json, which lists every version, and pass over a version meant for a newer
+# release. Older releases read their own file and reject all of it over one entry they cannot read, such as a
+# permission they do not know: each gets only the versions its releases take (no minAmpify, or one no later than the
+# last release that reads it).
+CATALOG = "catalog-1.5.json"
+OLDER_CATALOGS = [("catalog-1.3.json", "1.4.1"), ("catalog.json", "1.2.1")]
 
 # A line this long is not hand-written: the code is minified or packed, and nobody can review it.
 MAX_LINE = 400
@@ -203,7 +203,8 @@ def check(args):
     if pr_author and len(ids) > 1:
         failed = True
         lines += [f"- This pull request changes {len(ids)} elements. Send one element per pull request."]
-    protected = [path for path in others if path in (CATALOG, LEGACY_CATALOG) or path.startswith("packages/")]
+    written = {CATALOG} | {name for name, _last in OLDER_CATALOGS}
+    protected = [path for path in others if path in written or path.startswith("packages/")]
     if protected:
         failed = True
         lines += ["- This pull request changes files that the bot writes after the merge "
@@ -233,10 +234,11 @@ def archive_files(path):
         return [(item.filename, archive.read(item)) for item in archive.infolist()]
 
 
-def publish_one(pack, identifier, catalog, legacy=None):
+def publish_one(pack, identifier, catalog, older=()):
     """Packs sources/<identifier> unless this version is already there. Returns 'id version' when it packed. A version
     whose manifest names a `minAmpify` goes to its entry's newer list, so the older releases of Ampify keep theirs.
-    With `legacy` (catalog.json), the version is listed there too when the older releases can install it."""
+    `older` lists (catalog, the last Ampify release that reads it): the version goes to each one whose releases can
+    install it."""
     folder = os.path.join(ROOT, "sources", identifier)
     manifest = pack.check_folder(folder)
     name = f"{identifier}-{manifest['version']}.zip"
@@ -257,33 +259,35 @@ def publish_one(pack, identifier, catalog, legacy=None):
     url = f"{RAW}/{name}"
     min_ampify = manifest.get("minAmpify")
     pack.pack(folder, archive, catalog, url, min_ampify)
-    if legacy and takes_legacy(min_ampify):
+    takers = [path for path, last in older if taken_by(min_ampify, last)]
+    if takers:
         preview = pack.preview_target(manifest, archive)
         entry = pack.catalog_entry(manifest, url, sha256_of(archive), preview and pack.preview_address(preview, url))
-        pack.update_catalog(legacy, entry, min_ampify)
+        for path in takers:
+            pack.update_catalog(path, entry, min_ampify)
     print(f"{name}: packed")
     return f"{identifier} {manifest['version']}"
 
 
-def takes_legacy(min_ampify):
-    """True when Ampify LEGACY_AMPIFY and older can install a version that asks for this release of Ampify."""
-    return not min_ampify or version_key(min_ampify) <= version_key(LEGACY_AMPIFY)
+def taken_by(min_ampify, last):
+    """True when the releases of Ampify up to `last` can install a version that asks for this release of Ampify."""
+    return not min_ampify or version_key(min_ampify) <= version_key(last)
 
 
 def publish(args):
     pack = import_tools(args.ampify)
     ids, _others = split_changes(read_lines(args.changed))
     catalog = os.path.join(ROOT, CATALOG)
-    legacy = os.path.join(ROOT, LEGACY_CATALOG)
+    older = [(os.path.join(ROOT, name), last) for name, last in OLDER_CATALOGS]
     if not os.path.isfile(catalog):
-        shutil.copyfile(legacy, catalog)  # the first run: the 1.3 catalog starts from what is published
+        shutil.copyfile(older[0][0], catalog)  # the first run: the new catalog starts from what is published
     packed = []
     for identifier in ids:
         if not os.path.isdir(os.path.join(ROOT, "sources", identifier)):
             print(f"{identifier}: removed from sources/, its catalog entry is left for a maintainer")
             continue
         try:
-            done = publish_one(pack, identifier, catalog, legacy)
+            done = publish_one(pack, identifier, catalog, older)
         except (pack.PackError, OSError, KeyError, ValueError) as error:
             print(f"{identifier}: {error}", file=sys.stderr)
             return 1

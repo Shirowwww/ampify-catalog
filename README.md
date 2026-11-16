@@ -5,7 +5,8 @@ its own repository; this one only holds what the Marketplace offers.
 
 | Path | What it holds |
 |---|---|
-| `catalog-1.3.json` | Every element and version, with the address of its archive and its SHA-256: what Ampify 1.3.0 and later read |
+| `catalog-1.5.json` | Every element and version, with the address of its archive and its SHA-256: what Ampify 1.5.0 and later read |
+| `catalog-1.3.json` | The same, limited to the versions that Ampify 1.4.1 and older can install: what Ampify 1.3.0 to 1.4.1 read |
 | `catalog.json` | The same, limited to the versions that Ampify 1.2.1 and older can install: what those releases read |
 | `versions.json` | The Apple Music versions that the Ampify kernel accepts |
 | `packages/` | The archives, one `.zip` per element and version, and the preview picture shown on its Marketplace card |
@@ -34,7 +35,7 @@ A pull request only adds or changes `sources/<id>/`. It never touches `packages/
 A check runs on every pull request and comments with its result. It refuses an element when:
 
 - its manifest is not valid, or the folder is not named after its `id`;
-- its `version` is not higher than the one in `catalog-1.3.json`, or its archive already exists;
+- its `version` is not higher than the one in `catalog-1.5.json`, or its archive already exists;
 - it has no preview picture (`preview` in the manifest, and the file in the folder);
 - its code calls something (`Ampify.http`, `Ampify.storage`, `Ampify.notify`...) without declaring the permission;
 - a script looks minified or obfuscated (a line of more than 400 characters, names like `_0x1f3a`);
@@ -48,12 +49,13 @@ element must also reach no host beyond the ones it declares.
 ### After the merge
 
 A bot (`github-actions[bot]`) packs each changed element with `tools/pack.py` of Ampify, writes
-`packages/<id>-<version>.zip` (with the preview picture next to it), updates the entry in `catalog-1.3.json` with the
-address and the SHA-256, and commits that to `main`. A version whose manifest names a `minAmpify` later than 1.2.1
-goes to `catalog-1.3.json` only; any other also goes to `catalog.json`, so Ampify 1.2.1, which refuses the whole
-catalog over one entry it cannot read, keeps working. The Marketplace lists the element from then on. An archive never
-changes: a new version gets a new archive, and the old one stays, so a pinned install keeps working. Removing an element
-is done by a maintainer.
+`packages/<id>-<version>.zip` (with the preview picture next to it), updates the entry in `catalog-1.5.json` with the
+address and the SHA-256, and commits that to `main`. Releases before 1.5.0 refuse the whole catalog over one entry
+they cannot read, such as a permission they do not know, so the older files get only what they can install: a version
+whose `minAmpify` is 1.4.1 or earlier also goes to `catalog-1.3.json`, and one with no `minAmpify` or 1.2.1 and
+earlier to `catalog.json` too. Ampify 1.5.0 and later pass over a version meant for a newer release. The Marketplace
+lists the element from then on. An archive never changes: a new version gets a new archive, and the old one stays, so
+a pinned install keeps working. Removing an element is done by a maintainer.
 
 ## Ampify's own elements
 

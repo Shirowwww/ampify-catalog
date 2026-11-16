@@ -91,37 +91,52 @@ class PublishTests(unittest.TestCase):
             catalog_ci.publish_one(self.pack, "demo", self.catalog)
 
 
-class TwoCatalogTests(PublishTests):
+class OlderCatalogTests(PublishTests):
     def setUp(self):
         super().setUp()
-        self.legacy = os.path.join(self.root, "catalog-legacy.json")
-        with open(self.legacy, "w", encoding="utf-8", newline="\n") as handle:
-            json.dump({"catalogVersion": 1, "extensions": []}, handle)
+        self.legacy = self.empty_catalog("catalog-legacy.json")
+        self.middle = self.empty_catalog("catalog-middle.json")
+        self.older = [(self.middle, "1.4.1"), (self.legacy, "1.2.1")]
 
-    def legacy_entries(self):
-        with open(self.legacy, encoding="utf-8") as handle:
+    def empty_catalog(self, name):
+        path = os.path.join(self.root, name)
+        with open(path, "w", encoding="utf-8", newline="\n") as handle:
+            json.dump({"catalogVersion": 1, "extensions": []}, handle)
+        return path
+
+    def entries_of(self, path):
+        with open(path, encoding="utf-8") as handle:
             return json.load(handle)["extensions"]
 
-    def test_a_version_for_ampify_1_3_stays_out_of_the_old_catalog(self):
+    def test_a_version_for_ampify_1_3_stays_out_of_the_oldest_catalog(self):
         self.source("1.0.0", min_ampify="1.3.0")
-        self.assertEqual(catalog_ci.publish_one(self.pack, "demo", self.catalog, self.legacy), "demo 1.0.0")
+        self.assertEqual(catalog_ci.publish_one(self.pack, "demo", self.catalog, self.older), "demo 1.0.0")
         self.assertEqual([entry["version"] for entry in self.entries()], ["1.0.0"])
-        self.assertEqual(self.legacy_entries(), [])
+        self.assertEqual([entry["version"] for entry in self.entries_of(self.middle)], ["1.0.0"])
+        self.assertEqual(self.entries_of(self.legacy), [])
 
-    def test_a_version_older_releases_take_goes_to_both_catalogs(self):
-        self.source("1.0.0")
-        catalog_ci.publish_one(self.pack, "demo", self.catalog, self.legacy)
-        [entry] = self.legacy_entries()
-        self.assertEqual(entry["version"], "1.0.0")
-        self.assertEqual(entry, self.entries()[0])
+    def test_a_version_for_ampify_1_5_goes_only_to_the_newest_catalog(self):
+        self.source("1.0.0", min_ampify="1.5.0")
+        catalog_ci.publish_one(self.pack, "demo", self.catalog, self.older)
+        self.assertEqual([entry["version"] for entry in self.entries()], ["1.0.0"])
+        self.assertEqual(self.entries_of(self.middle), [])
+        self.assertEqual(self.entries_of(self.legacy), [])
 
-    def test_the_old_catalog_keeps_its_version_when_a_1_3_one_arrives(self):
+    def test_a_version_older_releases_take_goes_to_every_catalog(self):
         self.source("1.0.0")
-        catalog_ci.publish_one(self.pack, "demo", self.catalog, self.legacy)
-        self.source("1.1.0", min_ampify="1.3.0")
-        catalog_ci.publish_one(self.pack, "demo", self.catalog, self.legacy)
-        [old] = self.legacy_entries()
-        self.assertEqual((old["version"], old.get("newer")), ("1.0.0", None))
+        catalog_ci.publish_one(self.pack, "demo", self.catalog, self.older)
+        for path in (self.middle, self.legacy):
+            [entry] = self.entries_of(path)
+            self.assertEqual(entry, self.entries()[0])
+
+    def test_the_old_catalogs_keep_their_version_when_a_newer_one_arrives(self):
+        self.source("1.0.0")
+        catalog_ci.publish_one(self.pack, "demo", self.catalog, self.older)
+        self.source("1.1.0", min_ampify="1.5.0")
+        catalog_ci.publish_one(self.pack, "demo", self.catalog, self.older)
+        for path in (self.middle, self.legacy):
+            [old] = self.entries_of(path)
+            self.assertEqual((old["version"], old.get("newer")), ("1.0.0", None))
         self.assertEqual([item["version"] for item in self.entries()[0]["newer"]], ["1.1.0"])
 
 
