@@ -142,6 +142,24 @@
           "sha256": "b60f67dfe3d118b2e0c74e243b22e569fe39d5ee486a9fd7befd5489658690c3",
           "permissions": [],
           "minAmpify": "1.3.0"
+        },
+        {
+          "id": "album-colors",
+          "name": "Artwork colours",
+          "version": "1.2.3",
+          "kind": "snippet",
+          "author": "Shirowwww",
+          "description": "The colours of the artwork, on top of any theme: albums and playlists take those of their cover, under the header or on the whole page; the song playing glows in its own, on the display or the whole playback bar; and its artwork moves, blurred, behind the window.",
+          "kitApi": "1.0",
+          "tags": [
+            "artwork",
+            "colors"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/album-colors-1.2.3.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/album-colors-1.2.3.zip",
+          "sha256": "1b6af1c26c7805da0ef9a2e9be60bb990aeb1dbc699694e73d64e40343218e27",
+          "permissions": [],
+          "minAmpify": "1.3.0"
         }
       ]
     },
@@ -372,6 +390,25 @@
           "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/automix-1.0.1.jpg",
           "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/automix-1.0.1.zip",
           "sha256": "af0994da435c364bb65baafe0af616e3135116615f6184d9e0ab4a2f03a4e9b8",
+          "permissions": [
+            "audio.mix",
+            "storage",
+            "network:amp-api.music.apple.com",
+            "network:music.apple.com"
+          ],
+          "minAmpify": "1.4.0"
+        },
+        {
+          "id": "automix",
+          "name": "AutoMix",
+          "version": "1.0.2",
+          "kind": "extension",
+          "author": "Shirowwww",
+          "description": "Mixes each song into the next like a DJ: Apple's analysis of both songs picks the bar where the next one comes in, and Ampify keeps the two in step to the millisecond while their volumes cross.",
+          "kitApi": "1.0",
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/automix-1.0.2.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/automix-1.0.2.zip",
+          "sha256": "11ac971b9aa6b32915bd7fe12ef39378372b5dc04243dd47cb69c58ef6bc60e2",
           "permissions": [
             "audio.mix",
             "storage",
@@ -987,6 +1024,27 @@
           "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/fluent-2.0.3.jpg",
           "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/fluent-2.0.3.zip",
           "sha256": "9eac62806a1adff8506dd491175a2741ffdf15afe7f29e38e34beec5a44f4f7a",
+          "permissions": [],
+          "minAmpify": "1.3.0"
+        },
+        {
+          "id": "fluent",
+          "name": "Fluent",
+          "version": "2.0.4",
+          "kind": "theme",
+          "author": "Shirowwww",
+          "description": "Apple Music built like a Windows 11 app: the navigation and the controls on the window's Mica, the pages on one content layer with Windows' corner and hairline edge, Segoe UI Variable, and the accent on what acts. Light and dark.",
+          "kitApi": "1.0",
+          "tags": [
+            "windows",
+            "fluent",
+            "mica",
+            "light",
+            "dark"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/fluent-2.0.4.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/fluent-2.0.4.zip",
+          "sha256": "0db53543584f487df8f070979fe0459a2a451d28b88385ff7d874964e31771dc",
           "permissions": [],
           "minAmpify": "1.3.0"
         }
@@ -1968,6 +2026,25 @@
           "minAmpify": "1.3.0"
         }
       ]
+    },
+    {
+      "id": "sing",
+      "name": "Sing",
+      "version": "1.0.0",
+      "kind": "extension",
+      "author": "Shirowwww",
+      "description": "A karaoke mode: a microphone button on the playback bar turns the singer's voice down, or all the way off, while the music plays on, with a Light quality and a Studio quality that uses the graphics card.",
+      "kitApi": "1.0",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sing-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sing-1.0.0.zip",
+      "sha256": "c2ccb008bb9fca66301e782f666e839b62644e0c0f254084a31d231af397c54a",
+      "permissions": [
+        "audio.sing",
+        "storage",
+        "ui.playbar",
+        "ui.popup"
+      ],
+      "minAmpify": "1.5.0"
     },
     {
       "id": "skip-list",
