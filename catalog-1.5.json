@@ -2044,7 +2044,28 @@
         "ui.playbar",
         "ui.popup"
       ],
-      "minAmpify": "1.5.0"
+      "minAmpify": "1.5.0",
+      "newer": [
+        {
+          "id": "sing",
+          "name": "Sing",
+          "version": "1.0.1",
+          "kind": "extension",
+          "author": "Shirowwww",
+          "description": "A karaoke mode: a microphone button on the playback bar turns the singer's voice down, or all the way off, while the music plays on, with a Light quality and a Studio quality that uses the graphics card.",
+          "kitApi": "1.0",
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sing-1.0.1.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sing-1.0.1.zip",
+          "sha256": "008e3a2830083717f8528cd686076932d1d931e4b5e483be390ca06390a0be06",
+          "permissions": [
+            "audio.sing",
+            "storage",
+            "ui.playbar",
+            "ui.popup"
+          ],
+          "minAmpify": "1.5.1"
+        }
+      ]
     },
     {
       "id": "skip-list",
