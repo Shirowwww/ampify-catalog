@@ -454,6 +454,25 @@
             "network:music.apple.com"
           ],
           "minAmpify": "1.4.0"
+        },
+        {
+          "id": "automix",
+          "name": "AutoMix",
+          "version": "1.2.1",
+          "kind": "extension",
+          "author": "Shirowwww",
+          "description": "Mixes each song into the next like a DJ: Apple's analysis of both songs picks the bar where the next one comes in, and Ampify keeps the two in step to the millisecond while their volumes cross.",
+          "kitApi": "1.0",
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/automix-1.2.1.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/automix-1.2.1.zip",
+          "sha256": "ed8c18b8bc5e56c9f5137b178f6a92e8428947930566ea887900539d4065db2c",
+          "permissions": [
+            "audio.mix",
+            "storage",
+            "network:amp-api.music.apple.com",
+            "network:music.apple.com"
+          ],
+          "minAmpify": "1.5.8"
         }
       ]
     },
@@ -2114,6 +2133,25 @@
           "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sing-1.0.2.jpg",
           "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sing-1.0.2.zip",
           "sha256": "39abac401cc56430c6c8e27b3525ed0899ed38e454c8672291c31a2519e957ba",
+          "permissions": [
+            "audio.sing",
+            "storage",
+            "ui.playbar",
+            "ui.popup"
+          ],
+          "minAmpify": "1.5.6"
+        },
+        {
+          "id": "sing",
+          "name": "Sing",
+          "version": "1.0.3",
+          "kind": "extension",
+          "author": "Shirowwww",
+          "description": "A karaoke mode: a microphone button on the playback bar turns the singer's voice down, or all the way off, while the music plays on, with a Light quality and a Studio quality that uses the graphics card.",
+          "kitApi": "1.0",
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sing-1.0.3.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/sing-1.0.3.zip",
+          "sha256": "af3cf89a47a6ef80a7ae6e7007787381a0f86d14e8c98b6fd4a1d21ff4fc4c8f",
           "permissions": [
             "audio.sing",
             "storage",
