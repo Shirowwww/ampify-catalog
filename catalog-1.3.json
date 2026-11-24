@@ -2253,6 +2253,28 @@
             "storage"
           ],
           "minAmpify": "1.3.0"
+        },
+        {
+          "id": "song-panel",
+          "name": "Song panel",
+          "version": "1.4.0",
+          "kind": "extension",
+          "author": "Shirowwww",
+          "description": "A button of the playback bar that slides in a column about the song playing: a large cover, the lyrics lit word by word, its tempo, key and mood, the album with its year and genre, the artist, the credits and what comes next.",
+          "kitApi": "1.0",
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/song-panel-1.4.0.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/song-panel-1.4.0.zip",
+          "sha256": "59ada7517b261411bc881095622e33bfd607cc4efcaf200d00292ca623a81d58",
+          "permissions": [
+            "ui.panel",
+            "ui.playbar",
+            "ui.window",
+            "player.read",
+            "player.control",
+            "library.read",
+            "storage"
+          ],
+          "minAmpify": "1.3.0"
         }
       ]
     },
