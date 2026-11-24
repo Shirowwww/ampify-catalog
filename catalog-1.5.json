@@ -1295,6 +1295,23 @@
       ]
     },
     {
+      "id": "hi-res-badge",
+      "name": "Hi-Res Lossless badge",
+      "version": "1.0.0",
+      "kind": "extension",
+      "author": "Shirowwww",
+      "description": "Apple Music for Windows calls every lossless song \"Lossless\", even at 24-bit 192 kHz. Above 48 kHz, its badge, its flyout and its screen reader name say \"Hi-Res Lossless\" again, with \"HR\" after Apple's Lossless mark.",
+      "kitApi": "1.0",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hi-res-badge-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/hi-res-badge-1.0.0.zip",
+      "sha256": "e23230f1422de771743e2d7e1aec119068a6fe968ba9e3deb550d1113a1ebd00",
+      "permissions": [
+        "player.read",
+        "ui.playbar"
+      ],
+      "minAmpify": "1.5.9"
+    },
+    {
       "id": "hover-time",
       "name": "Time on hover",
       "version": "1.0.1",
