@@ -473,6 +473,25 @@
             "network:music.apple.com"
           ],
           "minAmpify": "1.5.8"
+        },
+        {
+          "id": "automix",
+          "name": "AutoMix (Beta)",
+          "version": "1.3.0",
+          "kind": "extension",
+          "author": "Shirowwww",
+          "description": "Mixes each song into the next like a DJ: Apple's analysis of both songs picks the bar where the next one comes in, and Ampify keeps the two in step to the millisecond while their volumes cross.",
+          "kitApi": "1.0",
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/automix-1.3.0.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/automix-1.3.0.zip",
+          "sha256": "1effe885688202a217f51b5bb7c6e8e291da583d531edf1bb0abb33762b02763",
+          "permissions": [
+            "audio.mix",
+            "storage",
+            "network:amp-api.music.apple.com",
+            "network:music.apple.com"
+          ],
+          "minAmpify": "1.5.8"
         }
       ]
     },
@@ -979,6 +998,24 @@
           "minAmpify": "1.3.0"
         }
       ]
+    },
+    {
+      "id": "explicit-filter",
+      "name": "Explicit or clean",
+      "version": "1.0.0",
+      "kind": "extension",
+      "author": "Shirowwww",
+      "description": "Plays one version of the songs Apple has in both, explicit or clean, and skips the other one when it comes up, such as a clean version added by mistake. Songs Apple marks neither way always play.",
+      "kitApi": "1.0",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/explicit-filter-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/explicit-filter-1.0.0.zip",
+      "sha256": "06550d74748cc1c1d61d85caca66210211ceb9ab2ddc81613bfc5ef041a27fbf",
+      "permissions": [
+        "player.read",
+        "player.control",
+        "notifications"
+      ],
+      "minAmpify": "1.6.0"
     },
     {
       "id": "fluent",
@@ -1583,6 +1620,31 @@
       ]
     },
     {
+      "id": "mini-player",
+      "name": "Mini player",
+      "version": "1.0.0",
+      "kind": "extension",
+      "author": "Shirowwww",
+      "description": "Apple's mini player, closer at hand: a shortcut opens and closes it from any program, its window can be see-through, a star marks the song as a favourite, and the album's animated cover plays over its artwork.",
+      "kitApi": "1.0",
+      "tags": [
+        "mini-player"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/mini-player-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/mini-player-1.0.0.zip",
+      "sha256": "8bc92a8a1fc71609ce9154dc2e33840981b1419e75b7a37adfa2c85f7a0ea8d8",
+      "permissions": [
+        "player.read",
+        "storage",
+        "ui.fullscreen",
+        "ui.keyboard",
+        "network:music.apple.com",
+        "network:amp-api.music.apple.com",
+        "network:mvod.itunes.apple.com"
+      ],
+      "minAmpify": "1.6.0"
+    },
+    {
       "id": "minimal-fullscreen",
       "name": "Minimal full screen",
       "version": "1.0.2",
@@ -1599,6 +1661,24 @@
       "sha256": "93202f248cfe314ad9aeaf00d738b8bb81190486ba83894c44ca8622141f61df",
       "permissions": [],
       "minAmpify": "1.3.0"
+    },
+    {
+      "id": "minimal-mini-player",
+      "name": "Minimal mini player",
+      "version": "1.0.0",
+      "kind": "snippet",
+      "author": "Shirowwww",
+      "description": "Apple's mini player with less around the song: a compact window whose progress line and buttons show under the pointer, and the title, times, volume, lyrics and Up Next buttons or Apple's moving background hidden, on top of any theme.",
+      "kitApi": "1.0",
+      "tags": [
+        "mini-player",
+        "minimal"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/minimal-mini-player-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/minimal-mini-player-1.0.0.zip",
+      "sha256": "e8d21ef39291a1e0f7f494e4eafba4d20e07a1652f1de18283bb5b4c96b2a057",
+      "permissions": [],
+      "minAmpify": "1.6.0"
     },
     {
       "id": "mirror",
@@ -1877,6 +1957,51 @@
       ]
     },
     {
+      "id": "play-history",
+      "name": "Play history",
+      "version": "1.0.0",
+      "kind": "app",
+      "author": "Shirowwww",
+      "description": "Every song played on this PC, newest first, stations such as Discovery included: Apple Music shows no history for them. Each line opens the song in Apple Music.",
+      "kitApi": "1.0",
+      "tags": [
+        "history",
+        "stations"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/play-history-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/play-history-1.0.0.zip",
+      "sha256": "ab0b4db9fec08382e5d6047d32bf4e9d032548ebd29f9bedb92abb542e221bf8",
+      "permissions": [
+        "player.read",
+        "storage",
+        "ui.page",
+        "ui.sidebar",
+        "network:music.apple.com",
+        "network:amp-api.music.apple.com",
+        "network:itunes.apple.com"
+      ],
+      "minAmpify": "1.3.0"
+    },
+    {
+      "id": "playback-speed",
+      "name": "Playback speed",
+      "version": "1.0.0",
+      "kind": "extension",
+      "author": "Shirowwww",
+      "description": "A button of the playback bar that plays songs from half to double speed, with a slider and presets. The speed holds across pauses and songs until it is set back to normal.",
+      "kitApi": "1.0",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/playback-speed-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/playback-speed-1.0.0.zip",
+      "sha256": "bfd35b9b309385c639a5ed31ef523db35de3b824ea705d7b15f7ce08d0eca610",
+      "permissions": [
+        "player.control",
+        "ui.playbar",
+        "ui.popup",
+        "storage"
+      ],
+      "minAmpify": "1.6.0"
+    },
+    {
       "id": "progress-line",
       "name": "Progress line",
       "version": "1.2.0",
@@ -1915,6 +2040,25 @@
           "minAmpify": "1.3.0"
         }
       ]
+    },
+    {
+      "id": "queue-flow",
+      "name": "Queue flow",
+      "version": "1.0.0",
+      "kind": "extension",
+      "author": "Shirowwww",
+      "description": "A button of the playback bar that sorts the songs to come so that each one leads into the next, from Apple's own analysis of every song: close tempos, keys that sit together, no jump in energy or loudness. A second click puts the queue back.",
+      "kitApi": "1.0",
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/queue-flow-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/queue-flow-1.0.0.zip",
+      "sha256": "995de1345e627eb4e8ea7d26a4f6cbcdb334df2737b1cedb778a18ed7ce6bbbe",
+      "permissions": [
+        "player.read",
+        "player.control",
+        "ui.playbar",
+        "notifications"
+      ],
+      "minAmpify": "1.6.0"
     },
     {
       "id": "react-panel",
@@ -2318,7 +2462,31 @@
         "library.read",
         "storage"
       ],
-      "minAmpify": "1.3.0"
+      "minAmpify": "1.3.0",
+      "newer": [
+        {
+          "id": "song-panel",
+          "name": "Song panel",
+          "version": "1.3.0",
+          "kind": "extension",
+          "author": "Shirowwww",
+          "description": "A button of the playback bar that slides in a column about the song playing: a large cover, the lyrics lit word by word, its tempo, key and mood, the album with its year and genre, the artist, the credits and what comes next.",
+          "kitApi": "1.0",
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/song-panel-1.3.0.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/song-panel-1.3.0.zip",
+          "sha256": "76cc70315989e99459b7560a484132e409e60317162e82052bb487ee482f1695",
+          "permissions": [
+            "ui.panel",
+            "ui.playbar",
+            "ui.window",
+            "player.read",
+            "player.control",
+            "library.read",
+            "storage"
+          ],
+          "minAmpify": "1.3.0"
+        }
+      ]
     },
     {
       "id": "spinning-artwork",
