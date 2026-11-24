@@ -1,0 +1,53 @@
+/* Minimal mini player: Apple's mini player (a click on the artwork of the playback bar, or Ctrl+Shift+M) with less
+   around the song, one switch per part, on top of any theme. The mini player is a window of its own: only the names
+   that start with .mini- reach it (docs/themes/names.md). */
+
+/* The window ends under the song's row: the progress line and the buttons stand over it, on a veil, and show as soon as
+   the pointer is over them. Faded, they still take clicks, so the pointer finds them where they always are. With a pane
+   or the album view open, Apple's window comes back, its controls under the pointer only. */
+@setting controls {
+    :root {
+        --mini-window: compact;
+    }
+
+    .mini-controls {
+        opacity: 0;
+        transition: opacity 200ms;
+    }
+
+    .mini-controls:hover {
+        opacity: 1;
+    }
+}
+
+@setting title {
+    .mini-title,
+    .mini-artist {
+        visibility: collapsed;
+    }
+}
+
+@setting times {
+    .mini-time {
+        opacity: 0;
+    }
+}
+
+@setting volume {
+    .mini-player-volume {
+        visibility: collapsed;
+    }
+}
+
+@setting panes {
+    .mini-panes-buttons {
+        visibility: collapsed;
+    }
+}
+
+/* Apple's moving, blurred artwork behind the window goes: the theme's background shows instead. */
+@setting plain {
+    .mini-player-background {
+        opacity: 0;
+    }
+}
