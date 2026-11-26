@@ -2330,6 +2330,24 @@
           "sha256": "ae1c34dfdce446479c7f20191ca93773d8b22513579f7689c110d6e443586c1a",
           "permissions": [],
           "minAmpify": "1.3.0"
+        },
+        {
+          "id": "spinning-artwork",
+          "name": "Spinning artwork",
+          "version": "1.3.0",
+          "kind": "snippet",
+          "author": "Shirowwww",
+          "description": "Example snippet: the artwork of the play bar and of the full-screen player becomes a round record with grooves that turns, with @keyframes and animation. Settings keep it still, take the grooves away or leave the full-screen player alone.",
+          "kitApi": "1.0",
+          "tags": [
+            "animation",
+            "artwork"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.3.0.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.3.0.zip",
+          "sha256": "1293618bc15933e0446ec225998e3421c2c668d8f3c4b6d64204a424c340bb27",
+          "permissions": [],
+          "minAmpify": "1.3.0"
         }
       ]
     },

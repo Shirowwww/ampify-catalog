@@ -164,6 +164,32 @@
       ]
     },
     {
+      "id": "animated-cover",
+      "name": "Animated cover",
+      "version": "1.0.0",
+      "kind": "extension",
+      "author": "Shirowwww",
+      "description": "The album's animated cover, which Apple only shows on album pages, plays over the artwork of the play bar, of the full-screen player and of the mini player. Each place can be turned off.",
+      "kitApi": "1.0",
+      "tags": [
+        "artwork",
+        "animation"
+      ],
+      "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/animated-cover-1.0.0.jpg",
+      "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/animated-cover-1.0.0.zip",
+      "sha256": "e03718086f99f23a497cea4aac8d9a002b9712bd0d9b289515401d73f2e47d4c",
+      "permissions": [
+        "player.read",
+        "storage",
+        "ui.playbar",
+        "ui.fullscreen",
+        "network:music.apple.com",
+        "network:amp-api.music.apple.com",
+        "network:mvod.itunes.apple.com"
+      ],
+      "minAmpify": "1.6.2"
+    },
+    {
       "id": "artist-backdrop",
       "name": "Artist backdrop",
       "version": "1.0.0",
@@ -1642,7 +1668,29 @@
         "network:amp-api.music.apple.com",
         "network:mvod.itunes.apple.com"
       ],
-      "minAmpify": "1.6.0"
+      "minAmpify": "1.6.0",
+      "newer": [
+        {
+          "id": "mini-player",
+          "name": "Mini player",
+          "version": "1.1.0",
+          "kind": "extension",
+          "author": "Shirowwww",
+          "description": "Apple's mini player, closer at hand: a shortcut opens and closes it from any program, its window can be see-through, and a star marks the song as a favourite. The album's animated cover in it is now the Animated cover extension's.",
+          "kitApi": "1.0",
+          "tags": [
+            "mini-player"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/mini-player-1.1.0.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/mini-player-1.1.0.zip",
+          "sha256": "54ae98a86dfa48dc78f67cdc62fc2fa29aaf258d861681f0cf2720a868328dd6",
+          "permissions": [
+            "ui.fullscreen",
+            "ui.keyboard"
+          ],
+          "minAmpify": "1.6.2"
+        }
+      ]
     },
     {
       "id": "minimal-fullscreen",
@@ -2560,6 +2608,24 @@
           "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.2.2.jpg",
           "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.2.2.zip",
           "sha256": "ae1c34dfdce446479c7f20191ca93773d8b22513579f7689c110d6e443586c1a",
+          "permissions": [],
+          "minAmpify": "1.3.0"
+        },
+        {
+          "id": "spinning-artwork",
+          "name": "Spinning artwork",
+          "version": "1.3.0",
+          "kind": "snippet",
+          "author": "Shirowwww",
+          "description": "Example snippet: the artwork of the play bar and of the full-screen player becomes a round record with grooves that turns, with @keyframes and animation. Settings keep it still, take the grooves away or leave the full-screen player alone.",
+          "kitApi": "1.0",
+          "tags": [
+            "animation",
+            "artwork"
+          ],
+          "preview": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.3.0.jpg",
+          "url": "https://raw.githubusercontent.com/Shirowwww/ampify-catalog/main/packages/spinning-artwork-1.3.0.zip",
+          "sha256": "1293618bc15933e0446ec225998e3421c2c668d8f3c4b6d64204a424c340bb27",
           "permissions": [],
           "minAmpify": "1.3.0"
         }
